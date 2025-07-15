@@ -10,6 +10,224 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import shutil
 import glob
+from google import genai
+
+# Configure Gemini API
+def configure_gemini():
+    """Configure the Gemini API with your API key"""
+    # You'll need to set your API key as an environment variable
+    # export GOOGLE_API_KEY="your-api-key-here"
+    api_key = "AIzaSyDF65s7VX0L_6pmRWmzQtSYV3D5Wn0AJjE"
+    if not api_key:
+        print("Warning: GOOGLE_API_KEY environment variable not set")
+        return None
+    return genai.Client(api_key=api_key)
+
+def send_to_genai(story_prompt_file):
+    """
+    Send story information to Gemini 2.5 Flash for story generation
+    """
+    try:
+        # Load the story prompt data
+        with open(story_prompt_file, 'r', encoding='utf-8') as f:
+            story_data = json.load(f)
+        
+        print(f"Processing story for {story_data['symbol']} ({story_data['folder']})")
+        
+        # Initialize Gemini model
+        client = configure_gemini()
+        if not client:
+            print("Gemini not configured, skipping story generation")
+            return
+        
+        # Prepare the prompt for Gemini
+        prompt = create_story_prompt(story_data)
+        
+        # Upload and prepare images
+        contents = [prompt]
+        folder_path = os.path.join('accounts', story_data['folder'])
+        
+        for image_name in story_data['selected_images'].keys():
+            image_path = os.path.join(folder_path, image_name)
+            
+            if os.path.exists(image_path):
+                try:
+                    # Upload image to Gemini
+                    uploaded_file = client.files.upload(file=image_path)
+                    contents.append(uploaded_file)
+                    print(f"Uploaded image: {image_name}")
+                except Exception as e:
+                    print(f"Error uploading image {image_name}: {str(e)}")
+                    # Continue with other images even if one fails
+            else:
+                print(f"Image not found: {image_path}")
+        
+        # Send to Gemini with images
+        response = client.models.generate_content(
+            model="gemini-2.5-flash", 
+            contents=contents
+        )
+        
+        if response.text:
+            # Parse the JSON response from Gemini
+            try:
+                # Clean the response text - remove any markdown formatting
+                cleaned_response = response.text.strip()
+                
+                # Remove markdown code blocks if present
+                if cleaned_response.startswith('```json'):
+                    cleaned_response = cleaned_response[7:]
+                if cleaned_response.startswith('```'):
+                    cleaned_response = cleaned_response[3:]
+                if cleaned_response.endswith('```'):
+                    cleaned_response = cleaned_response[:-3]
+                
+                cleaned_response = cleaned_response.strip()
+                
+                print(f"Cleaned response: {cleaned_response[:200]}...")
+                
+                story_content = json.loads(cleaned_response)
+                save_generated_story(story_data, story_content, story_prompt_file)
+                print(f"Story generated successfully for {story_data['symbol']}")
+            except json.JSONDecodeError as e:
+                print(f"Error parsing JSON response from Gemini: {str(e)}")
+                print(f"Raw response: {response.text}")
+                print(f"Cleaned response: {cleaned_response}")
+                # Save as plain text if JSON parsing fails
+                save_generated_story(story_data, response.text, story_prompt_file)
+        else:
+            print("No response from Gemini")
+            
+    except Exception as e:
+        print(f"Error sending to Gemini: {str(e)}")
+
+def create_story_prompt(story_data):
+    """
+    Create a structured prompt for Gemini based on the story data
+    """
+    title = story_data['title']
+    direction = story_data['direction']
+    custom_direction = story_data['custom_direction']
+    selected_images = story_data['selected_images']
+    
+    # Build the prompt
+    prompt = f"""
+Du bist ein kreativer Geschichtenerzähler für Kinder. Erstelle eine spannende, kindgerechte Geschichte basierend auf den folgenden Informationen:
+
+TITEL: {title}
+
+GESCHICHTENRICHTUNG: {direction}
+"""
+    
+    if direction == 'custom' and custom_direction:
+        prompt += f"BESCHREIBUNG DER EIGENEN IDEE: {custom_direction}\n"
+    elif direction == 'pirates':
+        prompt += "Die Geschichte soll Piraten und Abenteuer auf hoher See beinhalten.\n"
+    elif direction == 'fairies':
+        prompt += "Die Geschichte soll Feen und magische Wesen beinhalten.\n"
+    elif direction == 'dragon':
+        prompt += "Die Geschichte soll einen Drachen und magische Abenteuer beinhalten.\n"
+    
+    prompt += f"\nBILDBESCHREIBUNGEN (zusätzlich zu den hochgeladenen Bildern):\n"
+    
+    for image_name, image_data in selected_images.items():
+        description = image_data.get('description', '')
+        if description:
+            prompt += f"- {image_name}: {description}\n"
+    
+    prompt += f"""
+ANWEISUNGEN:
+- Schreibe eine Geschichte für Kinder im Alter von 6-10 Jahren
+- Verwende einfache, verständliche Sprache
+- Mache die Geschichte spannend und unterhaltsam
+- Betrachte alle hochgeladenen Bilder genau und integriere sie in die Geschichte
+- Berücksichtige auch die zusätzlichen Beschreibungen der Bilder
+- Die Geschichte sollte etwa 300-500 Wörter lang sein
+- Verwende den gegebenen Titel als Titel der Geschichte
+- Erzähle die Geschichte so, als würdest du sie einem Kind vorlesen
+- Die Geschichte sollte in 4 Absätzen sein wobei jeder Absatz etwa 100 Wörter lang ist
+- Jedem der mitgegebenen Bild soll ein Absatz zugeordnet werden, wenn weniger als 4 Bilder mitgegeben werden, dann können die restlichen Absätze frei mit Text gefüllt werden
+- Wenn weniger als 4 Bilder mitgegeben werden, erstelle für die Absätze ohne Bild einen Prompt in der image_description, mit welchem ein zum Absatz passendes Bild generiert werden kann
+
+Schreibe die Geschichte in Deutsch und formatiere sie schön mit 4 Absätzen. 
+
+WICHTIG: Gib NUR das JSON-Objekt zurück, ohne Markdown-Formatierung oder Code-Blöcke. Verwende dieses exakte Format:
+
+{{
+    "titel": "Titel der Geschichte",
+    "absatz1": {{
+        "text": "Der erste Absatz der Geschichte",
+        "image": "Bildname oder null",
+        "image_description": "Beschreibung des Bildes oder Prompt um das Bild zu generieren"
+    }},
+    "absatz2": {{
+        "text": "Der zweite Absatz der Geschichte", 
+        "image": "Bildname oder null",
+        "image_description": "Beschreibung des Bildes oder Prompt um das Bild zu generieren"
+    }},
+    "absatz3": {{
+        "text": "Der dritte Absatz der Geschichte",
+        "image": "Bildname oder null",
+        "image_description": "Beschreibung des Bildes oder Prompt um das Bild zu generieren"
+    }},
+    "absatz4": {{
+        "text": "Der vierte Absatz der Geschichte",
+        "image": "Bildname oder null",
+        "image_description": "Beschreibung des Bildes oder Prompt um das Bild zu generieren"
+    }}
+}}
+
+Antworte NUR mit dem JSON-Objekt, nichts anderes.
+"""
+    
+    return prompt
+
+def save_generated_story(story_data, story_content, original_file_path):
+    """
+    Save the generated story back to the same folder
+    """
+    try:
+        folder_path = os.path.dirname(original_file_path)
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        
+        # Create story file with generated content
+        story_file = os.path.join(folder_path, f'generated_story_{timestamp}.json')
+        
+        # Check if story_content is already a dict (parsed JSON) or a string
+        if isinstance(story_content, dict):
+            # Structured JSON content
+            story_output = {
+                'symbol': story_data['symbol'],
+                'folder': story_data['folder'],
+                'title': story_data['title'],
+                'direction': story_data['direction'],
+                'custom_direction': story_data['custom_direction'],
+                'timestamp': datetime.now().isoformat(),
+                'selected_images': story_data['selected_images'],
+                'story': story_content,  # This is now the structured JSON
+                'original_prompt_file': os.path.basename(original_file_path)
+            }
+        else:
+            # Plain text content (fallback)
+            story_output = {
+                'symbol': story_data['symbol'],
+                'folder': story_data['folder'],
+                'title': story_data['title'],
+                'direction': story_data['direction'],
+                'custom_direction': story_data['custom_direction'],
+                'timestamp': datetime.now().isoformat(),
+                'selected_images': story_data['selected_images'],
+                'content': story_content,  # Plain text fallback
+                'original_prompt_file': os.path.basename(original_file_path)
+            }
+        
+        with open(story_file, 'w', encoding='utf-8') as f:
+            json.dump(story_output, f, ensure_ascii=False, indent=2)
+        
+        print(f"Generated story saved to: {story_file}")
+        
+    except Exception as e:
+        print(f"Error saving generated story: {str(e)}")
 
 class AccountsHandler(FileSystemEventHandler):
     def __init__(self):
@@ -393,6 +611,9 @@ class CustomHandler(SimpleHTTPRequestHandler):
             
             symbol = data['symbol']
             folder = data['folder']
+            title = data.get('title', '')
+            direction = data.get('direction', '')
+            custom_direction = data.get('customDirection', '')
             descriptions = data['descriptions']
             
             folder_path = os.path.join('accounts', folder)
@@ -403,26 +624,45 @@ class CustomHandler(SimpleHTTPRequestHandler):
                 with open(descriptions_file, 'w', encoding='utf-8') as f:
                     json.dump(descriptions, f, ensure_ascii=False, indent=2)
                 
-                # Create a summary file with all information
-                summary_file = os.path.join(folder_path, 'summary.json')
-                summary_data = {
+                # Create story prompt context file with timestamp
+                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                story_prompt_file = os.path.join(folder_path, f'story_prompt_kontext_{timestamp}.json')
+                
+                # Filter only selected images (useImage = true)
+                selected_images = {}
+                for image_name, image_data in descriptions.items():
+                    if isinstance(image_data, dict) and image_data.get('useImage', False):
+                        selected_images[image_name] = image_data
+                
+                story_data = {
                     'symbol': symbol,
                     'folder': folder,
+                    'title': title,
+                    'direction': direction,
+                    'custom_direction': custom_direction,
                     'timestamp': datetime.now().isoformat(),
-                    'total_images': len(descriptions),
-                    'descriptions': descriptions
+                    'selected_images': selected_images,
+                    'total_selected_images': len(selected_images)
                 }
                 
-                with open(summary_file, 'w', encoding='utf-8') as f:
-                    json.dump(summary_data, f, ensure_ascii=False, indent=2)
+                with open(story_prompt_file, 'w', encoding='utf-8') as f:
+                    json.dump(story_data, f, ensure_ascii=False, indent=2)
                 
-                print(f"Sent all information for {symbol} ({folder}): {len(descriptions)} descriptions")
+                print(f"Saved story prompt context for {symbol} ({folder}): {len(selected_images)} selected images")
+                print(f"Story file: {story_prompt_file}")
+
+                send_to_genai(story_prompt_file)
+                print("Sent to genai")
                 
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
                 self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
-                response = json.dumps({'success': True, 'message': f'Sent {len(descriptions)} descriptions'})
+                response = json.dumps({
+                    'success': True, 
+                    'message': f'Saved story with {len(selected_images)} selected images',
+                    'filename': f'story_prompt_kontext_{timestamp}.json'
+                })
                 self.wfile.write(response.encode())
             except Exception as e:
                 self.send_response(500)

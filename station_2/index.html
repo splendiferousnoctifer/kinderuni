@@ -39,13 +39,36 @@
                 <span id="selectedSymbol" class="selected-symbol"></span>
             </div>
             
+            <!-- Title Input Section -->
+            <div class="title-section">
+                <label for="storyTitle" class="title-label">Titel:</label>
+                <input type="text" id="storyTitle" class="title-input" placeholder="Gib deiner Geschichte einen Titel...">
+            </div>
+            
             <!-- Image Gallery Section -->
             <div class="gallery-section">
                 <h2>Deine Fotos</h2>
                 <div id="imageGallery" class="image-gallery">
                     <p class="no-images-message">Keine Fotos. Nimm ein paar Fotos auf, um sie hier zu sehen!</p>
                 </div>
-                <div class="send-all-section">
+            </div>
+            
+            <!-- Story Direction Selection -->
+            <div class="story-direction-section">
+                <h3>Wähle die Richtung deiner Geschichte:</h3>
+                <div class="direction-buttons">
+                    <button class="direction-btn" data-direction="pirates">🏴‍☠️ Piraten</button>
+                    <button class="direction-btn" data-direction="fairies">🧚‍♀️ Feen</button>
+                    <button class="direction-btn" data-direction="dragon">🐉 Drachen</button>
+                    <button class="direction-btn" data-direction="custom">✏️ Eigene Idee</button>
+                </div>
+                <div id="customDirectionInput" class="custom-direction-input" style="display: none;">
+                    <label for="customDirectionText">Beschreibe deine eigene Geschichte:</label>
+                    <textarea id="customDirectionText" placeholder="Erzähle, was in deiner Geschichte passieren soll..."></textarea>
+                </div>
+            </div>
+
+            <div class="send-all-section">
                     <button id="sendAllInfo" class="send-all-btn">Generiere deine Geschichte</button>
                 </div>
             </div>

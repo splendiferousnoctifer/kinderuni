@@ -19,6 +19,7 @@ const tiles = document.querySelectorAll('.tile');
 let currentSymbol = '';
 let currentFolder = '';
 let imageDescriptions = {};
+let selectedDirection = '';
 
 // Symbol to folder name mapping
 const symbolToFolder = {
@@ -241,20 +242,156 @@ async function displayContent(symbol) {
     // Show content display
     symbolSelection.style.display = 'none';
     contentDisplay.style.display = 'block';
+    
+    // Initialize direction buttons
+    initializeDirectionButtons();
 }
 
+// Handle story direction selection
+function handleDirectionSelection(direction) {
+    // Remove selected class from all buttons
+    document.querySelectorAll('.direction-btn').forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Add selected class to clicked button
+    const clickedBtn = document.querySelector(`[data-direction="${direction}"]`);
+    if (clickedBtn) {
+        clickedBtn.classList.add('selected');
+    }
+    
+    selectedDirection = direction;
+    
+    // Show/hide custom input
+    const customInput = document.getElementById('customDirectionInput');
+    if (direction === 'custom') {
+        customInput.style.display = 'block';
+    } else {
+        customInput.style.display = 'none';
+    }
+}
 
+// Initialize direction buttons
+function initializeDirectionButtons() {
+    const directionButtons = document.querySelectorAll('.direction-btn');
+    directionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const direction = button.dataset.direction;
+            handleDirectionSelection(direction);
+        });
+    });
+}
+
+// Reset to initial state
+function resetToInitialState() {
+    // Reset form fields
+    const storyTitleInput = document.getElementById('storyTitle');
+    const customDirectionText = document.getElementById('customDirectionText');
+    
+    if (storyTitleInput) storyTitleInput.value = '';
+    if (customDirectionText) customDirectionText.value = '';
+    
+    // Reset direction selection
+    selectedDirection = '';
+    document.querySelectorAll('.direction-btn').forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Hide custom direction input
+    const customInput = document.getElementById('customDirectionInput');
+    if (customInput) customInput.style.display = 'none';
+    
+    // Reset image descriptions
+    imageDescriptions = {};
+    
+    // Clear image gallery
+    if (imageGallery) imageGallery.innerHTML = '';
+    
+    // Reset button state
+    const sendAllBtn = document.getElementById('sendAllInfo');
+    if (sendAllBtn) {
+        sendAllBtn.textContent = 'Generiere deine Geschichte';
+        sendAllBtn.disabled = false;
+    }
+    
+    // Show symbol selection, hide content display
+    symbolSelection.style.display = 'block';
+    contentDisplay.style.display = 'none';
+    
+    // Reset state variables
+    currentSymbol = '';
+    currentFolder = '';
+    
+    console.log('Reset to initial state completed');
+}
 
 // Send all information function
 async function sendAllInformation() {
     const sendAllBtn = document.getElementById('sendAllInfo');
+    const storyTitleInput = document.getElementById('storyTitle');
     const textareas = document.querySelectorAll('.image-description');
     const selects = document.querySelectorAll('.use-image-select');
+    
+    // Validation checks
+    const title = storyTitleInput.value.trim();
+    if (!title) {
+        alert('Bitte gib deiner Geschichte einen Titel!');
+        storyTitleInput.focus();
+        return;
+    }
+    
+    if (!selectedDirection) {
+        alert('Bitte wähle eine Richtung für deine Geschichte aus!');
+        return;
+    }
+    
+    if (selectedDirection === 'custom') {
+        const customText = document.getElementById('customDirectionText').value.trim();
+        if (!customText) {
+            alert('Bitte beschreibe deine eigene Geschichte!');
+            document.getElementById('customDirectionText').focus();
+            return;
+        }
+    }
+    
+    // Count selected images
+    let selectedImageCount = 0;
+    const selectedImages = {};
+    
+    textareas.forEach(textarea => {
+        const imageName = textarea.dataset.imageName;
+        const description = textarea.value.trim();
+        const useImageCheckbox = document.querySelector(`.use-image-checkbox[data-image-name="${imageName}"]`);
+        const useImage = useImageCheckbox ? useImageCheckbox.checked : false;
+        
+        if (imageName) {
+            if (useImage) {
+                selectedImageCount++;
+                selectedImages[imageName] = {
+                    description: description,
+                    useImage: useImage
+                };
+            }
+        }
+    });
+    
+    if (selectedImageCount === 0) {
+        alert('Bitte wähle mindestens ein Bild aus!');
+        return;
+    }
+    
+    if (selectedImageCount > 4) {
+        alert('Du kannst maximal 4 Bilder auswählen! Du hast ' + selectedImageCount + ' Bilder ausgewählt.');
+        return;
+    }
     
     // Collect all descriptions and use image selections
     const allData = {
         symbol: currentSymbol,
         folder: currentFolder,
+        title: title,
+        direction: selectedDirection,
+        customDirection: selectedDirection === 'custom' ? document.getElementById('customDirectionText').value.trim() : '',
         descriptions: {}
     };
     
@@ -272,43 +409,34 @@ async function sendAllInformation() {
         }
     });
     
-    // Disable button while sending
-    sendAllBtn.disabled = true;
-    sendAllBtn.textContent = 'Sending...';
+    // Reset UI immediately and send data in background
+    resetToInitialState();
     
-    try {
-        const response = await fetch('/send-all-info', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(allData)
-        });
-        
+    // Send data to server in background (non-blocking)
+    fetch('/send-all-info', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(allData)
+    })
+    .then(response => {
         if (response.ok) {
-            const result = await response.json();
-            if (result.success) {
-                sendAllBtn.textContent = 'Sent Successfully!';
-                setTimeout(() => {
-                    sendAllBtn.textContent = 'Send All Information';
-                    sendAllBtn.disabled = false;
-                }, 3000);
-            } else {
-                alert('Failed to send information. Please try again.');
-                sendAllBtn.textContent = 'Send All Information';
-                sendAllBtn.disabled = false;
-            }
+            return response.json();
         } else {
-            alert('Failed to send information. Please try again.');
-            sendAllBtn.textContent = 'Send All Information';
-            sendAllBtn.disabled = false;
+            throw new Error('Network response was not ok');
         }
-    } catch (error) {
+    })
+    .then(result => {
+        if (result.success) {
+            console.log('Story generation started successfully');
+        } else {
+            console.error('Failed to start story generation');
+        }
+    })
+    .catch(error => {
         console.error('Error sending information:', error);
-        alert('Failed to send information. Please try again.');
-        sendAllBtn.textContent = 'Send All Information';
-        sendAllBtn.disabled = false;
-    }
+    });
 }
 
 // Event Listeners

@@ -1,0 +1,38 @@
+{
+  "symbol": "🦋",
+  "folder": "butterfly",
+  "title": "Susannas Abenteuer",
+  "direction": "fairies",
+  "custom_direction": "",
+  "timestamp": "2025-07-15T22:03:06.021878",
+  "selected_images": {
+    "kids_drawing_example_step1.png": {
+      "description": "susanna in einem wald umgeben von blumen",
+      "useImage": true
+    },
+    "kids_drawing_example_step2.png": {
+      "description": "susanna mit einer fee im wald",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Susannas Abenteuer",
+    "absatz1": {
+      "text": "Kennt ihr Susanna? Sie war ein Mädchen mit strahlend blonden Haaren und einem herzlichen Lächeln. Am liebsten verbrachte sie ihre Zeit draußen in der Natur. Eines sonnigen Nachmittags, als die Vögel fröhlich zwitscherten, spazierte Susanna durch einen wunderschönen, grünen Wald. Überall um sie herum blühten bunte Blumen in allen Farben des Regenbogens: leuchtendes Blau, sonniges Gelb, zartes Lila und kräftiges Rot. Zwei große, alte Bäume ragten hoch in den Himmel und spendeten kühlen Schatten. Susanna liebte es, die frische Waldluft einzuatmen und zu träumen. Sie dachte: „Ob es hier wohl Feen gibt?“",
+      "image": "kids_drawing_example_step1.png"
+    },
+    "absatz2": {
+      "text": "Kaum hatte Susanna diesen Gedanken gehabt, da hörte sie ein leises Kichern, so zart wie das Rascheln von Blättern im Wind. Sie schaute sich um und entdeckte, versteckt zwischen den Blumen, ein winzig kleines Wesen! Es war eine Fee! Die Fee hatte leuchtend grüne Kleidung an, kleine Fühlerchen auf dem Kopf und wunderschöne, durchsichtige Flügel, die wie Schmetterlingsflügel aussahen. Sie schwebte leicht über dem Waldboden und lächelte Susanna freundlich zu. „Hallo, Susanna!“, sagte die Fee mit einer Stimme, die wie kleine Glöckchen klang. „Mein Name ist Flori. Ich habe dich schon oft hier im Wald gesehen.“",
+      "image": "kids_drawing_example_step2.png"
+    },
+    "absatz3": {
+      "text": "Susanna war ganz aufgeregt. Eine echte Fee! „Hallo, Flori!“, antwortete sie und staunte über Floris schimmernde Flügel. „Gibt es hier wirklich Feen? Ich habe immer davon geträumt!“ Flori nickte. „Oh ja! Und noch viel mehr! Möchtest du unser magisches Feenreich sehen? Wir brauchen nämlich heute deine Hilfe. Ein kleiner Sternenstaubtropfen, der uns Energie gibt, ist verloren gegangen. Wir können ihn nicht alleine finden, er ist so gut versteckt!“ Susanna musste nicht lange überlegen. „Ja, unbedingt! Ich helfe euch gerne!“, rief sie. Flori nahm Susannas Hand, die sich plötzlich ganz leicht anfühlte.",
+      "image": null
+    },
+    "absatz4": {
+      "text": "Mit einem kleinen Zucken von Floris Flügeln schwebten sie durch einen funkelnden Vorhang aus glitzerndem Licht. Susanna fand sich in einer unglaublichen Welt wieder! Überall leuchteten Blumen in der Dunkelheit, Pilze waren kleine Häuschen und der Fluss glitzerte wie flüssiges Silber. Gemeinsam suchten sie nach dem Sternenstaubtropfen. Susanna entdeckte ihn schließlich unter einem großen, moosbewachsenen Stein, wo er wie ein winziger Diamant funkelte. Flori war überglücklich! „Danke, Susanna! Du bist wirklich mutig und hast ein gutes Herz!“ Die Fee schenkte Susanna ein kleines, duftendes Blütenblatt, das in der Dunkelheit leuchtete, als Erinnerung an ihr magisches Abenteuer. Dann brachte Flori Susanna sanft zurück in den Wald, wo die Sonne langsam unterging. Susanna wusste, dieser Tag würde sie nie vergessen.",
+      "image": null
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250715_220239.json"
+}

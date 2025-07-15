@@ -1,0 +1,20 @@
+{
+  "symbol": "🦋",
+  "folder": "butterfly",
+  "title": "Susannas Abenteuer",
+  "direction": "fairies",
+  "custom_direction": "",
+  "timestamp": "2025-07-15T22:00:23.424854",
+  "selected_images": {
+    "kids_drawing_example_step1.png": {
+      "description": "susanna in einem wald umgeben von blumen",
+      "useImage": true
+    },
+    "kids_drawing_example_step2.png": {
+      "description": "susanna mit einer fee im wald",
+      "useImage": true
+    }
+  },
+  "content": "```json\n{\n    \"titel\": \"Susannas Abenteuer\",\n    \"absatz1\": {\n        \"text\": \"Susanna liebte es, im Wald zu spielen. Es war ihr Lieblingsort, besonders wenn die Sonne durch die hohen Bäume tanzte und alles um sie herum glitzerte. An diesem besonderen Morgen zog sie ihr rosafarbenes Kleid an und machte sich auf den Weg. Überall um sie herum blühten bunte Blumen: rote, blaue, gelbe und lila. Sie rochen so süß! Susanna ging langsam zwischen den Bäumen hindurch, ihre Augen suchten etwas Besonderes. Manchmal, so dachte sie, konnte man hier die Geheimnisse des Waldes entdecken. Sie summte ein kleines Lied vor sich hin und bewunderte die vielen Blumen, die wie kleine Farbtupfer auf dem grünen Moos lagen. Der Wald war ruhig, nur das Zwitschern der Vögel begleitete sie.\",\n        \"image\": \"kids_drawing_example_step1.png\"\n    },\n    \"absatz2\": {\n        \"text\": \"Plötzlich hörte Susanna ein leises Summen, das anders klang als die Bienen. Sie blickte auf und da, direkt vor ihr, schwebte ein winziges Wesen! Es hatte glitzernde Flügel, die aussahen wie Schmetterlingsflügel, und trug ein grünes Kleidchen. Es war eine Fee! Die Fee lächelte Susanna freundlich zu und winkte mit ihrer kleinen Hand. Susanna war so überrascht, dass sie kein Wort herausbrachte. \\\"Hallo\\\", flüsterte die Fee mit einer Stimme, die wie Glöckchen klang. \\\"Mein Name ist Flora, und ich habe dich beobachtet. Du scheinst Blumen zu lieben, genau wie ich!\\\" Susanna lächelte zurück, ihr Herz klopfte vor Aufregung über diese unglaubliche Begegnung im Wald.\",\n        \"image\": \"kids_drawing_example_step2.png\"\n    },\n    \"absatz3\": {\n        \"text\": \"Flora erklärte, dass der Wald in Gefahr war. Die Regenbogenschnecke, die den Blumen ihren wunderschönen Glanz verlieh, hatte sich verlaufen und ihre Farben drohten zu verblassen! Nur Susanna konnte helfen, denn nur ein Menschenkind mit einem reinen Herzen konnte die Spur der Schnecke sehen, die für Feen unsichtbar war. Susanna zögerte nicht eine Sekunde. Gemeinsam folgten sie einem kaum sichtbaren, glitzernden Pfad, der durch die Bäume führte. Sie sprangen über Baumwurzeln und schlüpften unter dicken Büschen hindurch. Flora summte magische Melodien, die die Luft um sie herum zum Funkeln brachten, während Susanna gespannt nach Spuren suchte.\",\n        \"image\": null\n    },\n    \"absatz4\": {\n        \"text\": \"Tief im Wald, hinter einem großen, alten Baum, fanden sie die Regenbogenschnecke. Sie saß traurig auf einem Blatt und sah ganz blass aus. Susanna nahm vorsichtig ein Blatt mit etwas Tau darauf und gab es der Schnecke. Die Schnecke schlürfte das Wasser und begann sofort wieder in allen Regenbogenfarben zu leuchten! Flora tanzte vor Freude. \\\"Du hast den Blumen geholfen!\\\", rief die Fee begeistert. Als Dank schenkte Flora Susanna eine winzige, glitzernde Blume, die niemals verwelken würde. Mit einem letzten Winken verabschiedete sich Flora und verschwand im Glanz des Waldes. Susanna ging glücklich nach Hause, die kleine Blume fest in der Hand, und wusste, dass sie ein Geheimnis bewahren würde, das so bunt war wie ein Regenbogen.\",\n        \"image\": null\n    }\n}\n```",
+  "original_prompt_file": "story_prompt_kontext_20250715_215956.json"
+}
