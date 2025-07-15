@@ -89,32 +89,26 @@ async function initializeCamera() {
     }
 }
 
-// Save image to file
+// Save image to server
 async function saveImage(imageData, folderName) {
     try {
-        // Convert base64 to blob
-        const base64Data = imageData.split(',')[1];
-        const blob = await fetch(`data:image/jpeg;base64,${base64Data}`).then(res => res.blob());
-        
-        // Create a timestamp for unique filename
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-        const fileName = `photo_${timestamp}.jpg`;
-        
-        // Create a download link and trigger it
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = fileName;
-        a.style.display = 'none';
-        
-        // Set the download attribute to include the folder path
-        a.setAttribute('download', `accounts/${folderName}/${fileName}`);
-        
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
-        
-        return fileName;
+        const response = await fetch('/save-image', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                imageData: imageData,
+                folder: folderName
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to save image');
+        }
+
+        const result = await response.json();
+        return result.filename;
     } catch (err) {
         console.error('Error saving image:', err);
         throw err;
