@@ -17,7 +17,7 @@ def configure_gemini():
     """Configure the Gemini API with your API key"""
     # You'll need to set your API key as an environment variable
     # export GOOGLE_API_KEY="your-api-key-here"
-    api_key = "AIzaSyDF65s7VX0L_6pmRWmzQtSYV3D5Wn0AJjE"
+    api_key = "TODO"
     if not api_key:
         print("Warning: GOOGLE_API_KEY environment variable not set")
         return None
