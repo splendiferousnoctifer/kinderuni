@@ -57,11 +57,14 @@ body {
 .modal-content {
     position: relative;
     background-color: white;
-    margin: 10% auto;
+    margin: 2% auto;
     padding: 20px;
-    width: 80%;
-    max-width: 600px;
+    width: 95%;
+    max-width: 1200px;
     border-radius: 10px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .close-button {
@@ -75,6 +78,9 @@ body {
 .camera-container {
     margin-top: 20px;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .camera-select-container {
@@ -105,9 +111,12 @@ label {
 
 #video {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(90vh - 200px);
     border-radius: 10px;
     margin-bottom: 20px;
+    object-fit: contain;
 }
 
 .camera-controls {
@@ -115,17 +124,21 @@ label {
 }
 
 #captureButton {
-    padding: 10px 20px;
+    padding: 20px 40px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 #captureButton:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 /* Responsive Design */

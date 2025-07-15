@@ -10,6 +10,9 @@ const tiles = document.querySelectorAll('.tile');
 let currentSymbol = '';
 let stream = null;
 
+// Apply mirror effect to video
+video.style.transform = 'scaleX(-1)';
+
 // Symbol to folder name mapping
 const symbolToFolder = {
     '🌟': 'star',
@@ -145,7 +148,14 @@ captureButton.addEventListener('click', async () => {
         
         // Draw the current video frame on the canvas
         const context = canvas.getContext('2d');
+        
+        // Apply the same mirror effect when capturing
+        context.scale(-1, 1);
+        context.translate(-canvas.width, 0);
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Reset transformation
+        context.setTransform(1, 0, 0, 1, 0, 0);
         
         // Convert the canvas to a data URL
         const imageData = canvas.toDataURL('image/jpeg', 0.8);
@@ -166,10 +176,10 @@ captureButton.addEventListener('click', async () => {
         }
         
         // Show success message with the file location
-        alert(`Picture saved as ${fileName} in the ${folderName} folder!`);
+        alert(`Foto wurde als ${fileName} im Ordner ${folderName} gespeichert!`);
     } catch (err) {
         console.error('Error capturing image:', err);
-        alert('Failed to save the image. Please try again.');
+        alert('Fehler beim Speichern des Fotos. Bitte versuchen Sie es erneut.');
     }
 });
 
