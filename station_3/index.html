@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Minuten Timer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .timer-container {
+            width: 80%;
+            max-width: 800px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timer-bar {
+            width: 100%;
+            height: 40px;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            width: 100%;
+            height: 100%;
+            background-color: #4CAF50;
+            transform-origin: left;
+            transition: transform 1s linear;
+        }
+
+        .time-display {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timer-container">
+        <div class="header">Nächste Märchen Lieferung</div>
+        <div class="time-display">10:00</div>
+        <div class="timer-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        const TIMER_DURATION = 10 * 60; // 10 minutes in seconds
+        const progressBar = document.querySelector('.progress');
+        const timeDisplay = document.querySelector('.time-display');
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            let timeLeft = TIMER_DURATION;
+            
+            // Reset progress bar animation
+            progressBar.style.transition = 'none';
+            progressBar.style.transform = 'scaleX(1)';
+            
+            // Force reflow
+            progressBar.offsetHeight;
+            
+            // Start smooth animation
+            progressBar.style.transition = 'transform ' + TIMER_DURATION + 's linear';
+            progressBar.style.transform = 'scaleX(0)';
+            
+            // Update time display
+            timeDisplay.textContent = formatTime(timeLeft);
+            
+            // Update time every second
+            const interval = setInterval(() => {
+                timeLeft--;
+                timeDisplay.textContent = formatTime(timeLeft);
+                
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    startTimer();
+                }
+            }, 1000);
+        }
+
+        // Start the timer when the page loads
+        window.addEventListener('load', startTimer);
+    </script>
+</body>
+</html> 
