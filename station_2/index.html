@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Story Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Symbol Selection Stage -->
+    <div id="symbolSelection" class="container">
+        <div class="tiles-grid">
+            <button class="tile" data-symbol="🌟">🌟</button>
+            <button class="tile" data-symbol="🌈">🌈</button>
+            <button class="tile" data-symbol="🌺">🌺</button>
+            <button class="tile" data-symbol="🦋">🦋</button>
+            <button class="tile" data-symbol="🐬">🐬</button>
+            <button class="tile" data-symbol="🦁">🦁</button>
+            <button class="tile" data-symbol="🐘">🐘</button>
+            <button class="tile" data-symbol="🦒">🦒</button>
+            <button class="tile" data-symbol="🦊">🦊</button>
+            <button class="tile" data-symbol="🐼">🐼</button>
+            <button class="tile" data-symbol="🐢">🐢</button>
+            <button class="tile" data-symbol="🦉">🦉</button>
+            <button class="tile" data-symbol="🦄">🦄</button>
+            <button class="tile" data-symbol="🐠">🐠</button>
+            <button class="tile" data-symbol="🦚">🦚</button>
+        </div>
+    </div>
+
+    <!-- Content Display Stage -->
+    <div id="contentDisplay" class="container" style="display: none;">
+        <div class="header">
+            <button id="backButton" class="back-button">← Zurück zu den Symbolen</button>
+        </div>
+        
+        <div class="content-section">
+            <div class="symbol-display">
+                <span id="selectedSymbol" class="selected-symbol"></span>
+            </div>
+            
+            <!-- Image Gallery Section -->
+            <div class="gallery-section">
+                <h2>Deine Fotos</h2>
+                <div id="imageGallery" class="image-gallery">
+                    <p class="no-images-message">Keine Fotos. Nimm ein paar Fotos auf, um sie hier zu sehen!</p>
+                </div>
+                <div class="send-all-section">
+                    <button id="sendAllInfo" class="send-all-btn">Generiere deine Geschichte</button>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+
+    <!-- Image View Modal -->
+    <div id="imageViewModal" class="modal">
+        <div class="modal-content image-view-content">
+            <span class="close-button image-close-button">&times;</span>
+            <div class="image-view-container">
+                <img id="enlargedImage" class="enlarged-image" src="" alt="">
+                <div class="image-info">
+                    <p id="imageFileName" class="image-file-name"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

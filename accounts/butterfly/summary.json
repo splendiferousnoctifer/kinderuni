@@ -1,0 +1,24 @@
+{
+  "symbol": "🦋",
+  "folder": "butterfly",
+  "timestamp": "2025-07-15T16:38:40.849400",
+  "total_images": 4,
+  "descriptions": {
+    "001_test.png": {
+      "description": "test",
+      "useImage": false
+    },
+    "002_test.png": {
+      "description": "test 2",
+      "useImage": true
+    },
+    "003_test.png": {
+      "description": "erwsyggd",
+      "useImage": true
+    },
+    "Screenshot 2025-03-24 085219.png": {
+      "description": "fdhgfjd strz  hfdgd",
+      "useImage": false
+    }
+  }
+}
