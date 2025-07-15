@@ -116,7 +116,7 @@
     <div class="stories-container" id="storiesContainer"></div>
 
     <script>
-        const TIMER_DURATION = 10 * 60; // 10 minutes in seconds
+        const TIMER_DURATION = 1 * 60; // 10 minutes in seconds
         const progressBar = document.querySelector('.progress');
         const timeDisplay = document.querySelector('.time-display');
         const storiesContainer = document.getElementById('storiesContainer');
@@ -137,8 +137,10 @@
 
         async function handleTimerExpired() {
             try {
+                console.log('Timer expired, calling /timer-expired endpoint...');
                 const response = await fetch('/timer-expired');
                 const result = await response.json();
+                console.log('Timer expired response:', result);
                 if (result.success) {
                     console.log(`Files moved to ${result.batch_dir}:`, result.files);
                 }

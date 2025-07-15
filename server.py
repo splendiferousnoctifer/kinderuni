@@ -47,19 +47,9 @@ class AccountsHandler(FileSystemEventHandler):
             with open(file_path, 'r') as f:
                 data = json.load(f)
                 
-            # Check if the file has already been printed
-            if data.get('printed', False):
-                print(f"File {file_path} has already been processed")
-                return
-                
             # Check for content section
             if 'content' in data:
                 print(f"New story detected: {file_path}")
-                
-                # Update the file to mark it as printed
-                data['printed'] = True
-                with open(file_path, 'w') as f:
-                    json.dump(data, f, indent=2)
             else:
                 print(f"No content section found in {file_path}")
                 
@@ -117,8 +107,10 @@ class CustomHandler(SimpleHTTPRequestHandler):
         # Handle /timer-expired endpoint
         elif self.path.rstrip('/') == '/timer-expired':
             try:
+                print("Timer expired endpoint called")
                 # Create to_print directory if it doesn't exist
                 os.makedirs('to_print', exist_ok=True)
+                print("Created to_print directory")
                 
                 # Get current timestamp for the batch
                 timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -126,29 +118,44 @@ class CustomHandler(SimpleHTTPRequestHandler):
                 # Create a new directory for this batch
                 batch_dir = os.path.join('to_print', f'batch_{timestamp}')
                 os.makedirs(batch_dir, exist_ok=True)
+                print(f"Created batch directory: {batch_dir}")
                 
                 # Track all files we're going to move
                 moved_files = []
                 
                 # Go through all account folders
                 accounts_path = 'accounts'
+                print(f"Scanning accounts directory: {accounts_path}")
+                
                 for folder in os.listdir(accounts_path):
                     folder_path = os.path.join(accounts_path, folder)
+                    print(f"Checking folder: {folder_path}")
                     if os.path.isdir(folder_path):
                         # Skip the folder definition file
                         for file in os.listdir(folder_path):
                             if file.endswith('.json') and file != f'{folder}.json':
                                 src_path = os.path.join(folder_path, file)
-                                # Create a new filename that includes the folder name
-                                new_filename = f"{folder}_{file}"
-                                dst_path = os.path.join(batch_dir, new_filename)
+                                print(f"Found JSON file: {src_path}")
                                 
+                                # Read the file to check if it has content
                                 try:
-                                    # Copy the file instead of moving it
-                                    shutil.copy2(src_path, dst_path)
-                                    moved_files.append(new_filename)
+                                    with open(src_path, 'r') as f:
+                                        data = json.load(f)
+                                        if 'content' in data:
+                                            # Create a new filename that includes the folder name
+                                            new_filename = f"{folder}_{file}"
+                                            dst_path = os.path.join(batch_dir, new_filename)
+                                            print(f"Moving {src_path} to {dst_path}")
+                                            
+                                            # Move the file instead of copying
+                                            shutil.move(src_path, dst_path)
+                                            moved_files.append(new_filename)
+                                            print(f"Successfully moved {new_filename}")
                                 except Exception as e:
-                                    print(f"Error copying {src_path}: {str(e)}")
+                                    print(f"Error processing {src_path}: {str(e)}")
+                
+                print(f"Total files copied: {len(moved_files)}")
+                print(f"Files: {moved_files}")
                 
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
