@@ -14,6 +14,7 @@
             min-height: 100vh;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            overflow-x: hidden;
         }
 
         .timer-container {
@@ -56,6 +57,51 @@
             color: #333;
             margin-bottom: 20px;
         }
+
+        .stories-container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .story-card {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .story-emoji {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .story-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -67,10 +113,65 @@
         </div>
     </div>
 
+    <div class="stories-container" id="storiesContainer"></div>
+
     <script>
         const TIMER_DURATION = 10 * 60; // 10 minutes in seconds
         const progressBar = document.querySelector('.progress');
         const timeDisplay = document.querySelector('.time-display');
+        const storiesContainer = document.getElementById('storiesContainer');
+        let currentStories = [];
+
+        async function checkForNewStories() {
+            try {
+                const response = await fetch('/get-stories');
+                const stories = await response.json();
+                
+                // Update current stories
+                currentStories = stories;
+                displayStories();
+            } catch (error) {
+                console.error('Error checking for stories:', error);
+            }
+        }
+
+        async function handleTimerExpired() {
+            try {
+                const response = await fetch('/timer-expired');
+                const result = await response.json();
+                if (result.success) {
+                    console.log(`Files moved to ${result.batch_dir}:`, result.files);
+                }
+            } catch (error) {
+                console.error('Error handling timer expiration:', error);
+            }
+        }
+
+        function displayStories() {
+            // Clear current display
+            storiesContainer.innerHTML = '';
+            
+            // Display each story
+            currentStories.forEach(story => {
+                const storyCard = document.createElement('div');
+                storyCard.className = 'story-card';
+                
+                // Add emoji
+                const emojiDiv = document.createElement('div');
+                emojiDiv.className = 'story-emoji';
+                emojiDiv.textContent = story.emoji;
+                storyCard.appendChild(emojiDiv);
+                
+                // Get only image entries and create HTML
+                const imageHtml = Object.entries(story.content)
+                    .filter(([key]) => key.startsWith('img_'))
+                    .map(([_, src]) => `<img src="/${src}" class="story-image" alt="Story image">`)
+                    .join('');
+                
+                storyCard.insertAdjacentHTML('beforeend', imageHtml);
+                storiesContainer.appendChild(storyCard);
+            });
+        }
 
         function formatTime(seconds) {
             const minutes = Math.floor(seconds / 60);
@@ -102,13 +203,24 @@
                 
                 if (timeLeft <= 0) {
                     clearInterval(interval);
-                    startTimer();
+                    handleTimerExpired().then(() => {
+                        startTimer();
+                        // Clear stories when timer resets
+                        storiesContainer.innerHTML = '';
+                        currentStories = [];
+                    });
                 }
             }, 1000);
         }
 
-        // Start the timer when the page loads
-        window.addEventListener('load', startTimer);
+        // Start the timer and story checking when the page loads
+        window.addEventListener('load', () => {
+            startTimer();
+            // Check for stories every 5 seconds
+            setInterval(checkForNewStories, 5000);
+            // Initial check
+            checkForNewStories();
+        });
     </script>
 </body>
 </html> 
