@@ -1,0 +1,4 @@
+1)	Foto machen mit Webcam
+    a.	Symbol auswählen
+    b.	Website, wo ein Button ist, den sie klicken müssen
+    c.	Bild wird dann in einen OneDrive Folder gespeichert

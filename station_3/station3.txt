@@ -1,0 +1,3 @@
+3)	Station Beamer:
+    a.	Hochegladene bilder werden angezeigt/symbole + wartezeit
+    b.	Wartezeit bis zum nächsten druck

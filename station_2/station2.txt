@@ -1,0 +1,5 @@
+2)	Kontext mitgeben (2 Stationen)
+    a.	Symbol auswählen
+    b.	Option nix schreiben zu müssen, sondern aus vorgegebenem Prompt (-teilen) zu wählen; 1-4 Bilder
+        i.	Pro bild ein satz/stichwörter von kind eingeben
+    c.	Option zu gegebener Geschichte Bilder generieren
