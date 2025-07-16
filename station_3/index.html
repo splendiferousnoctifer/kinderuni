@@ -125,6 +125,9 @@
         async function checkForNewStories() {
             try {
                 const response = await fetch('/get-stories');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const stories = await response.json();
                 
                 // Update current stories
@@ -167,7 +170,17 @@
                 // Get only image entries and create HTML
                 const imageHtml = Object.entries(story.content)
                     .filter(([key]) => key.startsWith('img_'))
-                    .map(([_, src]) => `<img src="/${src}" class="story-image" alt="Story image">`)
+                    .map(([_, src]) => {
+                        const img = document.createElement('img');
+                        img.src = `/accounts/${src}`;  // Add /accounts/ prefix to the path
+                        img.className = 'story-image';
+                        img.alt = 'Story image';
+                        img.onerror = function() {
+                            console.error('Failed to load image:', this.src);
+                            this.style.display = 'none';
+                        };
+                        return img.outerHTML;
+                    })
                     .join('');
                 
                 storyCard.insertAdjacentHTML('beforeend', imageHtml);

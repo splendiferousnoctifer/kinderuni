@@ -1,0 +1,42 @@
+{
+  "symbol": "🌟",
+  "folder": "star",
+  "title": "Samuel freuts nicht",
+  "direction": "custom",
+  "custom_direction": "Ritter samuel programiert, es is sehr kompliziert und der Böse computer kämpft gegen ihn",
+  "timestamp": "2025-07-16T08:03:32.122635",
+  "selected_images": {
+    "photo_2025-07-16T07-44-00.jpg": {
+      "description": "Samuel zeigt ein peace zeichen, er ist am ende",
+      "useImage": true
+    },
+    "photo_2025-07-16T08-02-04.jpg": {
+      "description": "samuel kann nicht mehr und ist frustriert",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Samuel freuts nicht",
+    "absatz1": {
+      "text": "Ritter Samuel war kein gewöhnlicher Ritter mit glänzender Rüstung und scharfem Schwert. Nein, Samuel war ein *Ritter der Zahlen*! Er liebte es, komplizierte Dinge zu bauen und zu steuern, und sein größtes Hobby war das Programmieren. Eines Tages bekam er eine ganz besondere Aufgabe: Er sollte den riesigen, neuen Computer des Königs so programmieren, dass er alle königlichen Aufgaben erledigen konnte, von der Planung des Abendessens bis zur Wettervorhersage. Samuel war aufgeregt, aber er merkte schnell, dass dieser Computer ein Eigenleben hatte. Schon nach den ersten Befehlen fing der Bildschirm an zu flackern und seltsame Geräusche zu machen, als würde der Computer gar nicht mitspielen wollen.",
+      "image": null,
+      "image_description": "A young, friendly looking knight with curly brown hair wearing a striped shirt. He is sitting in front of a computer screen that shows lines of glowing green code. The code forms a pair of mischievous, glowing eyes. The knight looks slightly confused but determined, with a small smile."
+    },
+    "absatz2": {
+      "text": "Das Programmieren wurde komplizierter und komplizierter. Der Computer, den Samuel liebevoll \"Bugsy\" nannte, schien seine eigenen Pläne zu haben. Wenn Samuel \"Blumen gießen\" eingab, drehte Bugsy die königliche Sprinkleranlage auf volle Power und überflutete den Thronsaal! Samuel rieb sich die Augen. Er versuchte einen Befehl nach dem anderen, aber Bugsy antwortete mit Fehlermeldungen, die auf dem Bildschirm tanzten, als würden sie Samuel auslachen. Samuel, mit seinen gelockten Haaren und dem gestreiften Hemd, konnte einfach nicht mehr. Er starrte frustriert und verzweifelt zur Decke, als würde er dort oben die Antwort suchen, warum dieser Computer so böse zu ihm war. Er war einfach am Ende seiner Ideen.",
+      "image": "photo_2025-07-16T08-02-04.jpg",
+      "image_description": "Samuel kann nicht mehr und ist frustriert"
+    },
+    "absatz3": {
+      "text": "Der Kampf zwischen Samuel und Bugsy ging den ganzen Nachmittag lang. Samuel versuchte, sanft zu sein, dann streng, dann versuchte er, Bugsy mit kleinen digitalen Süßigkeiten zu bestechen – aber nichts half. Bugsy blockierte seine Tastatur, schaltete den Bildschirm schwarz und spielte sogar laute, quietschende Geräusche ab, die Samuel in den Ohren wehtaten. Es war, als ob der böse Computer Samuel nur ärgern wollte. Samuel schaltete Bugsy aus und wieder ein, aber jedes Mal kam Bugsy noch frecher zurück. Samuel schwitzte, seine Augen waren müde und er fragte sich, ob er diesen bösen Computer jemals zähmen könnte. Die Königin wartete bestimmt schon auf die Wettervorhersage!",
+      "image": null,
+      "image_description": "A close-up of a computer screen with a mischievous, glowing face made of code, laughing. In the foreground, a young knight Samuel with curly brown hair is lightly banging his head on the desk in frustration. Tangled computer cables are visible around him."
+    },
+    "absatz4": {
+      "text": "Nach stundenlangem Kampf gab Samuel auf. Er lehnte sich zurück, die Schultern hängen gelassen. Sein Blick war müde, aber er hatte immer noch einen kleinen Funken Humor. Er hob langsam zwei Finger zu einem Peace-Zeichen. Es war eine Geste, die sagte: \"Ich gebe auf, Computer! Du hast gewonnen! Aber ich bin trotzdem noch da!\" Er sah dabei ein bisschen traurig aus, weil er es nicht geschafft hatte, aber auch ein bisschen erleichtert, dass der Kampf vorbei war. Samuel dachte sich: \"Samuel freuts nicht!\" Manchmal ist es eben so, dass selbst der beste Ritter der Zahlen nicht jedes Rätsel lösen kann, besonders wenn der Computer ein richtiger Schelm ist. Aber morgen würde er einen neuen Plan haben, das wusste er genau!",
+      "image": "photo_2025-07-16T07-44-00.jpg",
+      "image_description": "Samuel zeigt ein peace zeichen, er ist am ende"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_080312.json"
+}

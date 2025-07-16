@@ -321,7 +321,6 @@ class CustomHandler(SimpleHTTPRequestHandler):
         return None
 
     def do_GET(self):
-        # Special endpoints handling first
         if self.path.rstrip('/') == '/get-stories':
             self.handle_get_stories()
             return
@@ -555,6 +554,7 @@ class CustomHandler(SimpleHTTPRequestHandler):
             self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
             self.wfile.write(json.dumps(stories).encode())
+            
         except Exception as e:
             self.log_debug(f"Error getting stories: {str(e)}")
             self.send_error(500, str(e))

@@ -1,2 +1,4 @@
 watchdog
 google-genai
+reportlab
+pillow
