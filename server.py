@@ -13,7 +13,13 @@ import glob
 from google import genai
 import posixpath
 import urllib.parse
+import sys
+from pathlib import Path
 
+# Get the absolute path to the directory containing server.py
+BASE_DIR = Path(__file__).resolve().parent
+
+# === Settings ===
 # Configure Gemini API
 def configure_gemini():
     """Configure the Gemini API with your API key"""
@@ -300,22 +306,23 @@ class CustomHandler(SimpleHTTPRequestHandler):
         if len(parts) > 1 and parts[0].startswith('station_'):
             station = parts[0]
             subpath = parts[1]
-            station_path = os.path.join(station, subpath)
-            if os.path.exists(station_path):
+            station_path = BASE_DIR / station / subpath
+            if station_path.exists():
                 self.log_debug(f"Found in specified station: {station_path}")
-                return f"/{station_path}"
+                return str(station_path)
         
         # Check each station directory
         for station in ['station_1', 'station_2', 'station_3']:
-            station_path = os.path.join(station, path)
-            if os.path.exists(station_path):
+            station_path = BASE_DIR / station / path
+            if station_path.exists():
                 self.log_debug(f"Found in station directory: {station_path}")
-                return f"/{station_path}"
+                return str(station_path)
             
         # If not found in stations, try direct path
-        if os.path.exists(path):
-            self.log_debug(f"Found in root: {path}")
-            return f"/{path}"
+        direct_path = BASE_DIR / path
+        if direct_path.exists():
+            self.log_debug(f"Found in root: {direct_path}")
+            return str(direct_path)
             
         self.log_debug(f"File not found: {path}")
         return None
@@ -702,7 +709,7 @@ class CustomHandler(SimpleHTTPRequestHandler):
             self.send_error(500, str(e))
 
 def start_file_watcher():
-    accounts_path = 'accounts'
+    accounts_path = str(BASE_DIR / 'accounts')
     event_handler = AccountsHandler()
     observer = Observer()
     observer.schedule(event_handler, accounts_path, recursive=True)
@@ -711,9 +718,11 @@ def start_file_watcher():
     return observer
 
 def run_server():
+    # Change to the directory containing server.py
+    os.chdir(str(BASE_DIR))
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, CustomHandler)
-    print('Server running on http://localhost:8000')
+    print(f'Server running on http://localhost:8000 from directory {BASE_DIR}')
     httpd.serve_forever()
 
 if __name__ == '__main__':
