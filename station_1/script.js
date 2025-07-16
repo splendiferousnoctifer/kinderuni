@@ -10,6 +10,40 @@ const tiles = document.querySelectorAll('.tile');
 let currentSymbol = '';
 let stream = null;
 
+// Ensure console.log works
+if (!console.log) {
+    console.log = function() {};
+}
+
+// Force log to both console and DOM
+function forceLog(message, data = null) {
+    const timestamp = new Date().toISOString();
+    const logDiv = document.createElement('div');
+    logDiv.style.position = 'fixed';
+    logDiv.style.top = '0';
+    logDiv.style.left = '0';
+    logDiv.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    logDiv.style.color = 'white';
+    logDiv.style.padding = '5px';
+    logDiv.style.zIndex = '9999';
+    logDiv.style.maxWidth = '100%';
+    logDiv.style.wordBreak = 'break-all';
+    
+    let logMessage = `[${timestamp}] ${message}`;
+    if (data) {
+        logMessage += ': ' + JSON.stringify(data);
+    }
+    
+    logDiv.textContent = logMessage;
+    document.body.appendChild(logDiv);
+    
+    // Remove after 5 seconds
+    setTimeout(() => logDiv.remove(), 5000);
+    
+    // Also log to console if available
+    console.log(logMessage);
+}
+
 // Apply mirror effect to video
 video.style.transform = 'scaleX(-1)';
 
@@ -35,24 +69,85 @@ const symbolToFolder = {
 // Get available cameras and populate the dropdown
 async function getCameraDevices() {
     try {
+        console.log('Starting camera device enumeration...');
+        
+        // First, clear any existing streams
+        if (stream) {
+            stream.getTracks().forEach(track => {
+                track.stop();
+                stream.removeTrack(track);
+            });
+            stream = null;
+        }
+        
+        // Force permission prompt by requesting with exact constraints
+        try {
+            const testStream = await navigator.mediaDevices.getUserMedia({
+                video: {
+                    width: { exact: 1280 },
+                    height: { exact: 720 }
+                }
+            });
+            testStream.getTracks().forEach(track => track.stop());
+        } catch (err) {
+            console.log('Forcing permission prompt:', err);
+            // Expected to fail sometimes, we just want to trigger the prompt
+        }
+        
+        // Now enumerate devices
+        await navigator.mediaDevices.getUserMedia({ video: true });
         const devices = await navigator.mediaDevices.enumerateDevices();
+        console.log('All devices found:', devices);
+        
         const videoDevices = devices.filter(device => device.kind === 'videoinput');
+        console.log('Video devices found:', videoDevices);
         
         // Clear existing options
         cameraSelect.innerHTML = '';
         
-        // Add options for each camera
-        videoDevices.forEach(device => {
+        // Find IPEVO camera first
+        let selectedDevice = null;
+        for (let device of videoDevices) {
+            const deviceInfo = (device.label || '').toLowerCase();
+            const groupInfo = (device.groupId || '').toLowerCase();
+            
+            console.log('Checking device for IPEVO:', {
+                label: deviceInfo,
+                groupId: groupInfo,
+                deviceId: device.deviceId
+            });
+            
+            if (deviceInfo.includes('ipevo') || 
+                deviceInfo.includes('1778:d002') || 
+                groupInfo.includes('1778:d002')) {
+                console.log('Found IPEVO camera! Using it as default:', device);
+                selectedDevice = device;
+                break;
+            }
+        }
+        
+        // Add options and select IPEVO if found
+        videoDevices.forEach((device, index) => {
             const option = document.createElement('option');
             option.value = device.deviceId;
-            option.text = device.label || `Camera ${cameraSelect.length + 1}`;
+            option.text = device.label || `Camera ${index + 1}`;
+            
+            // Mark IPEVO as standard
+            if (device === selectedDevice) {
+                option.text += ' (Standard)';
+                option.selected = true;
+            }
+            
             cameraSelect.appendChild(option);
         });
 
-        // If no camera label is available, we need to initialize a stream first
-        if (videoDevices.length > 0 && !videoDevices[0].label) {
+        // Initialize with selected device if found, otherwise use default
+        if (selectedDevice) {
+            console.log('Initializing with IPEVO camera');
+            await initializeCamera(selectedDevice.deviceId);
+        } else {
+            console.log('IPEVO camera not found, using default camera');
             await initializeCamera();
-            await getCameraDevices(); // Retry after getting labels
         }
     } catch (err) {
         console.error('Error getting camera devices:', err);
@@ -60,34 +155,40 @@ async function getCameraDevices() {
 }
 
 // Initialize camera access
-async function initializeCamera() {
+async function initializeCamera(deviceId = null) {
     try {
+        forceLog('Initializing camera', { deviceId });
+        
         // Stop any existing stream
         if (stream) {
             stream.getTracks().forEach(track => track.stop());
+            forceLog('Stopped existing camera stream');
         }
-
-        // Get the selected camera ID, or use the default one
-        const deviceId = cameraSelect.value;
         
         const constraints = {
             video: {
                 deviceId: deviceId ? { exact: deviceId } : undefined,
-                facingMode: deviceId ? undefined : 'environment',
                 width: { ideal: 1280 },
                 height: { ideal: 720 }
             }
         };
-
+        forceLog('Using camera constraints', constraints);
+        
         stream = await navigator.mediaDevices.getUserMedia(constraints);
         video.srcObject = stream;
-
-        // If this is the first time getting camera access, populate the dropdown
-        if (cameraSelect.options.length === 0) {
-            await getCameraDevices();
-        }
+        forceLog('Camera initialized successfully');
+        
+        // Wait for video to be ready
+        await new Promise((resolve) => {
+            video.onloadedmetadata = () => {
+                forceLog('Video metadata loaded');
+                resolve();
+            };
+        });
+        
+        forceLog('Camera setup complete');
     } catch (err) {
-        console.error('Error accessing camera:', err);
+        forceLog('Error accessing camera', err);
         alert('Unable to access camera. Please make sure you have granted camera permissions.');
     }
 }
@@ -124,19 +225,20 @@ tiles.forEach(tile => {
         currentSymbol = tile.dataset.symbol;
         modal.style.display = 'block';
         await getCameraDevices();
-        await initializeCamera();
     });
 });
 
 // Handle camera selection change
-cameraSelect.addEventListener('change', () => {
-    initializeCamera();
+cameraSelect.addEventListener('change', (event) => {
+    forceLog('Camera selection changed', { newDeviceId: event.target.value });
+    initializeCamera(event.target.value);
 });
 
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
     if (stream) {
         stream.getTracks().forEach(track => track.stop());
+        forceLog('Camera stream stopped');
     }
 });
 
