@@ -1,0 +1,27 @@
+{
+  "symbol": "🦁",
+  "folder": "lion",
+  "title": "Peter Hase",
+  "direction": "custom",
+  "custom_direction": "Fabelhafte Tiere",
+  "timestamp": "2025-07-16T13:50:36.701450",
+  "selected_images": {
+    "photo_2025-07-16T13-40-39.jpg": {
+      "description": "4. und sie essen gemeinsam einen leckeren kuchen",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-39-59.jpg": {
+      "description": "3. er trifft auf einen freund Igi",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-39-29.jpg": {
+      "description": "2. Peter hase geht spazieren",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-38-53.jpg": {
+      "description": "1. Peter hase steht vor seinem haus",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}

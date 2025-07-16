@@ -1,0 +1,19 @@
+{
+  "symbol": "🐠",
+  "folder": "fish",
+  "title": "Prinzessinen",
+  "direction": "custom",
+  "custom_direction": "Schneewittchen geht spazieren und enteckt bambi das ihre hilfe benötigt! gemeinsam schaffen sie es das hindernis zu überwinden",
+  "timestamp": "2025-07-16T12:10:28.672390",
+  "selected_images": {
+    "photo_2025-07-16T12-02-46.jpg": {
+      "description": "2. schneewittchen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-02-20.jpg": {
+      "description": "1. bambi auf einer grünen wiese",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 2
+}

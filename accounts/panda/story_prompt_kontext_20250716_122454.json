@@ -1,0 +1,19 @@
+{
+  "symbol": "🐼",
+  "folder": "panda",
+  "title": "Der Bolzplatzheld",
+  "direction": "custom",
+  "custom_direction": "unser held schafft es das unglück abzuwenden und wird von allen am bolzplatz gefeiert",
+  "timestamp": "2025-07-16T12:24:54.595873",
+  "selected_images": {
+    "photo_2025-07-16T12-14-04.jpg": {
+      "description": "2. in der sleben nachbarschaft bricht gerade ein vulkan aus",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-13-38.jpg": {
+      "description": "1. Unser Held ist am fußballfeld und trainiert, und schießt ein paar tore und aufeinmal kommt ein riesiger bauch vom bluthimmerl herunter",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 2
+}

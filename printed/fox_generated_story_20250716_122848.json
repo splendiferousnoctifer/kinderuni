@@ -1,0 +1,50 @@
+{
+  "symbol": "🦊",
+  "folder": "fox",
+  "title": "Alles ist weg",
+  "direction": "custom",
+  "custom_direction": "Eine lehrreiche geschichte wie wichtig die sonne und unsere erde ist, wenn alles weg ist haven wir nichts mehr. erzähle die geschichte sehr episch und mit einem einprägsamen ende",
+  "timestamp": "2025-07-16T12:28:48.160627",
+  "selected_images": {
+    "photo_2025-07-16T12-17-31.jpg": {
+      "description": "4. alles ist weg",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-16-59.jpg": {
+      "description": "2. die sonne überhitzt wegen dem klimawandel und alle planeten explodieren",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-16-36.jpg": {
+      "description": "1. Das sonnensystem",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-17-13.jpg": {
+      "description": "3. alles explodiert",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Alles ist weg",
+    "absatz1": {
+      "text": "Stell dir vor, hoch oben im Weltall, ganz weit weg von hier, gab es einmal eine wunderschöne Familie. Es war unsere Sonnenfamilie! In der Mitte strahlte die große, goldene Sonne wie ein König, der alle wärmt. Um sie herum tanzten ihre Kinder, die Planeten, in großen Kreisen. Da war der schnelle Merkur, die glühende Venus, der rote Mars, der riesige Jupiter, der ringige Saturn, der kalte Uranus, der blaue Neptun und natürlich... unsere geliebte Erde! Sie alle waren zusammen und machten unser Zuhause, das Sonnensystem, so besonders und lebendig. Jeden Tag schickte die Sonne ihre warmen Strahlen zur Erde, damit Blumen wachsen, Vögel singen und wir spielen können. Alles war perfekt!",
+      "image": "photo_2025-07-16T12-16-36.jpg",
+      "image_description": "1. Das sonnensystem"
+    },
+    "absatz2": {
+      "text": "Doch eines Tages begann die Sonne, sich ein bisschen anders zu fühlen. Sie strahlte immer noch, aber irgendwie wurde sie... unruhiger. Es war so, als würde sie Fieber bekommen, weil die Menschen auf der Erde nicht mehr so gut auf unseren Planeten aufpassten. Die Luft wurde heißer, die Eisberge schmolzen, und die Sonne wurde immer wütender und glühender. Sie begann, immer mehr Hitze in das Weltall zu pusten. Die armen Planeten, die um sie herumkreisten, spürten die Hitze. Sie wurden rot und begannen zu zittern, als ob sie große Angst hätten. Die Sonne wurde immer größer und heißer, ein bisschen wie ein aufgeblasener Ballon, der gleich platzt.",
+      "image": "photo_2025-07-16T12-16-59.jpg",
+      "image_description": "2. die sonne überhitzt wegen dem klimawandel und alle planeten explodieren"
+    },
+    "absatz3": {
+      "text": "Und dann geschah es. Die Sonne wurde so unglaublich heiß, dass die armen Planeten es einfach nicht mehr aushielten. Einer nach dem anderen, angefangen beim nächsten, bis hin zu unserer Erde, konnten sie dem Druck nicht standhalten. Mit einem gewaltigen Knall, einem lauten, ohrenbetäubenden „BOOM!“, zerbarsten sie in tausend winzige Stücke. Stell dir vor, wie ein riesiger Luftballon, der platzt, aber viel, viel größer und mit leuchtenden Funken. Es war ein schrecklicher Anblick. Wo eben noch Planeten waren, die so wunderschön um die Sonne tanzten, gab es plötzlich nur noch eine riesige Wolke aus Staub und glühenden Resten.",
+      "image": "photo_2025-07-16T12-17-13.jpg",
+      "image_description": "3. alles explodiert"
+    },
+    "absatz4": {
+      "text": "Danach war es still. Ganz still. Kein Planet mehr, der seine Runden drehte. Keine Sonne mehr, die warm und freundlich strahlte. Nichts. Wo unser wunderschönes Sonnensystem gewesen war, war jetzt nur noch eine leere, kalte Schwärze. Alles war weg. Keine Blumen mehr, keine lachenden Kinder, kein Vogelgesang. Und genau das zeigt uns, wie wichtig unsere Erde und unsere Sonne sind. Wir müssen gut auf sie aufpassen, sie schützen und lieb haben, damit unser Zuhause immer strahlen kann und wir niemals sagen müssen: \"Alles ist weg!\" Denn ein Zuhause im Weltall ist das größte Geschenk von allen.",
+      "image": "photo_2025-07-16T12-17-31.jpg",
+      "image_description": "4. alles ist weg"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_122819.json"
+}

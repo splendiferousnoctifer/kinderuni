@@ -1,0 +1,27 @@
+{
+  "symbol": "🦊",
+  "folder": "fox",
+  "title": "Alles ist weg",
+  "direction": "custom",
+  "custom_direction": "Eine lehrreiche geschichte wie wichtig die sonne und unsere erde ist, wenn alles weg ist haven wir nichts mehr. erzähle die geschichte sehr episch und mit einem einprägsamen ende",
+  "timestamp": "2025-07-16T12:28:19.361784",
+  "selected_images": {
+    "photo_2025-07-16T12-17-31.jpg": {
+      "description": "4. alles ist weg",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-16-59.jpg": {
+      "description": "2. die sonne überhitzt wegen dem klimawandel und alle planeten explodieren",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-16-36.jpg": {
+      "description": "1. Das sonnensystem",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-17-13.jpg": {
+      "description": "3. alles explodiert",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}

@@ -1,0 +1,27 @@
+{
+  "symbol": "🐢",
+  "folder": "turtle",
+  "title": "Die superschlaue katze",
+  "direction": "custom",
+  "custom_direction": "Geschichte einer schlauen katze die das mäiuse fangen lernte vergessen hat",
+  "timestamp": "2025-07-16T12:18:31.152969",
+  "selected_images": {
+    "photo_2025-07-16T12-07-33.jpg": {
+      "description": "2. ihr gehirn ist so riesig, sie wollte unbedingt mäuse fangen aber hat es vergessen wie sie mäsue fängt, weil so viele andere tole gedanken im kopf sind",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-08-22.jpg": {
+      "description": "3. im internet schaute sie sich videos an wie man mäuse fängt, um auch hier noch schlauer zu werden",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-07-15.jpg": {
+      "description": "1. eine katze ist so schlau",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-08-44.jpg": {
+      "description": "4. sie schaute in ihren tresor und dann ging sie jagen",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}

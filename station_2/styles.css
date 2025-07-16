@@ -147,7 +147,7 @@ body {
 
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -156,14 +156,15 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
 
 .gallery-image:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
@@ -475,11 +476,11 @@ body {
 }
 
 .enlarged-image {
-    max-width: 100%;
-    max-height: 80vh;
+    max-width: 80%;
+    max-height: 70vh;
     object-fit: contain;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image-info {

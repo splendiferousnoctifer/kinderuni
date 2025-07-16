@@ -1,0 +1,42 @@
+{
+  "symbol": "🐠",
+  "folder": "fish",
+  "title": "Prinzessinen",
+  "direction": "custom",
+  "custom_direction": "Schneewittchen geht spazieren und enteckt bambi das ihre hilfe benötigt! gemeinsam schaffen sie es das hindernis zu überwinden",
+  "timestamp": "2025-07-16T12:10:48.467465",
+  "selected_images": {
+    "photo_2025-07-16T12-02-46.jpg": {
+      "description": "2. schneewittchen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-02-20.jpg": {
+      "description": "1. bambi auf einer grünen wiese",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Prinzessinen",
+    "absatz1": {
+      "text": "Eines strahlenden Morgens, als die Sonne golden durch die Baumwipfel schien, beschloss Prinzessin Schneewittchen einen Spaziergang zu machen. Sie trug ihr wunderschönes blaues Kleid und eine kleine rote Schleife schmückte ihr dunkles Haar. Fröhlich summte sie ein Lied, während sie auf einem kleinen Pfad durch den dichten Wald schlenderte. Die Vögel sangen ihr zu und Eichhörnchen huschten neugierig vorbei. Schneewittchen liebte es, die Natur zu erkunden und die Geheimnisse des Waldes zu entdecken. Jeder Schritt brachte sie tiefer in die grüne, friedliche Stille, und ein Lächeln lag auf ihrem Gesicht. Sie war so glücklich und unbeschwert.",
+      "image": "photo_2025-07-16T12-02-46.jpg",
+      "image_description": "Eine Kinderzeichnung von Schneewittchen in einem blauen Kleid mit einem roten Gürtel und einer roten Schleife auf dem Kopf, lächelnd, vor einem grünen Hintergrund (Gras unten)."
+    },
+    "absatz2": {
+      "text": "Plötzlich hörte Schneewittchen ein leises Fiepen und Scharren. Neugierig folgte sie dem Geräusch, das sie zu einer sonnigen Lichtung führte. Dort, inmitten von saftig grünem Gras, stand ein kleines, zartes Rehkitz. Es war Bambi! Seine großen, braunen Augen sahen traurig und ein wenig ängstlich aus. Bambi versuchte, einen hohen, dicken Ast zu überwinden, der quer über den Pfad lag, aber seine kleinen Beinchen waren noch zu schwach, um darüber zu springen. Es war ganz alleine und brauchte dringend Hilfe. Schneewittchen spürte sofort, dass sie diesem süßen Tierchen beistehen musste.",
+      "image": "photo_2025-07-16T12-02-20.jpg",
+      "image_description": "Eine Kinderzeichnung eines kleinen, braunen Rehkitzes (Bambi), das auf einer leuchtend grünen Wiese steht."
+    },
+    "absatz3": {
+      "text": "Schneewittchen trat vorsichtig näher, um Bambi nicht zu erschrecken. „Hallo, kleines Reh“, flüsterte sie sanft. „Keine Sorge, ich helfe dir.“ Sie beugte sich hinunter und schaute sich den Ast genau an. Er war zu schwer, um ihn wegzuschieben, aber vielleicht gab es einen anderen Weg. Schneewittchen hatte eine Idee! „Versuch, deine Vorderbeine auf den Ast zu legen, Bambi. Dann schieb dich nach und nach drüber, ich passe auf, dass du nicht fällst.“ Bambi verstand und versuchte es. Es war eine echte Herausforderung, aber Schneewittchen gab ihm Mut und zeigte ihm, wie es seine kleinen Hufe am besten aufsetzen konnte.",
+      "image": null,
+      "image_description": "Schneewittchen und das Rehkitz (Bambi) arbeiten zusammen, um einen umgefallenen Baumstamm zu überwinden, während Schneewittchen das Rehkitz vorsichtig anleitet. Der Wald ist sonnig und grün, im Stil einer Kinderzeichnung."
+    },
+    "absatz4": {
+      "text": "Mit Schneewittchens geduldiger Anleitung und viel Anstrengung schaffte es Bambi schließlich! Mit einem letzten kleinen Sprung war es über den Ast und stand auf der anderen Seite des Pfades. Erleichtert schnaubte es und stieß ein kleines \"Muh\" aus, als Dankeschön. Schneewittchen lachte fröhlich und streichelte sanft Bambis weichen Kopf. „Gut gemacht, Bambi! Du hast es geschafft!“ Von diesem Tag an waren Prinzessin Schneewittchen und Bambi die besten Freunde. Sie trafen sich oft im Wald, spielten Verstecken zwischen den Bäumen und teilten die Geheimnisse des Waldes. Und Schneewittchen wusste, dass wahre Freundschaft jedes Hindernis überwinden kann.",
+      "image": null,
+      "image_description": "Schneewittchen streichelt glücklich das Rehkitz (Bambi), das sich an sie schmiegt, nachdem sie gemeinsam ein Hindernis überwunden haben. Beide sehen zufrieden und glücklich aus in einem sonnigen Wald, im Stil einer Kinderzeichnung."
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_121028.json"
+}

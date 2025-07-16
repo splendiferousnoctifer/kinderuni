@@ -1,0 +1,50 @@
+{
+  "symbol": "🌺",
+  "folder": "flower",
+  "title": "Das wunder der natur",
+  "direction": "custom",
+  "custom_direction": "Es war ein mal ein Fuch der nicht wusste was er machen sollte. dann ging er spazieren und da traf er auf einen schmetterling und der schmetterling fragte: wohin gehst du? und der fuchs antwortete: nirgends. und der schmetterling wollte mitkommen, der fuchs wollte das auch. gemeinsam gingen sie nach nirgends. am weg fanden sie noch einen löwen und einen panda.",
+  "timestamp": "2025-07-16T13:56:22.189175",
+  "selected_images": {
+    "photo_2025-07-16T13-42-20.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-42-01.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-41-41.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-42-58.jpg": {
+      "description": "",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Das wunder der natur",
+    "absatz1": {
+      "text": "Es war einmal ein kleiner Fuchs namens Freddy. Freddy war ein sehr freundlicher Fuchs, aber heute wusste er einfach nicht, was er tun sollte. Er saß da und schaute traurig in die Luft. \"Mir ist so langweilig!\", dachte er. \"Was kann ich nur machen?\" Nach einer Weile beschloss er, einfach spazieren zu gehen. Vielleicht würde er ja etwas Spannendes entdecken oder eine Idee bekommen, wohin er gehen könnte. Er trottete los, seine flauschigen Pfoten tippten leise auf dem Waldboden, bereit für ein kleines Abenteuer, das er noch gar nicht kannte.",
+      "image": "Fuchs.jpg",
+      "image_description": "Ein Kinderbild von einem orangefarbenen Fuchs mit schwarzen Umrissen, großen Augen, einer kleinen Nase und einem fröhlichen Lächeln, der aufrecht sitzt."
+    },
+    "absatz2": {
+      "text": "Nicht weit war Freddy gegangen, da sah er etwas Buntes im Wind tanzen. Es war ein wunderschöner Schmetterling mit leuchtend blauen Flügeln, darauf waren sogar kleine Ringe und Streifen in Braun und Gold. Der Schmetterling flatterte fröhlich umher und landete direkt vor Freddys Nase. „Hallo!“, sagte der Schmetterling und lächelte freundlich. „Wohin gehst du denn, lieber Fuchs? Du siehst so nachdenklich aus.“ Freddy antwortete: „Ich gehe nirgends hin. Ich weiß nicht, wohin ich soll.“ Der Schmetterling, der Lilli hieß, fragte aufgeregt: „Oh, darf ich mitkommen? Nirgends klingt so geheimnisvoll!“ Freddy freute sich über die Gesellschaft und sagte lachend: „Ja klar, komm mit!“",
+      "image": "Schmetterling.jpg",
+      "image_description": "Ein Kinderbild eines Schmetterlings mit grauem Körper, einem lächelnden Gesicht und großen, bunten Flügeln. Die oberen Flügel sind gestreift in Schwarz, Braun und Gold, während die unteren Flügel hauptsächlich blau sind mit hellblauen/türkisen Kreisen und lila Herzen."
+    },
+    "absatz3": {
+      "text": "So gingen Freddy und Lilli gemeinsam los, auf dem Weg nach Nirgends. Sie plauderten und lachten über lustige Dinge, die sie im Wald sahen. Plötzlich hörten sie ein leises Schnurren. Und da, unter einem großen Baum, saß ein Löwe! Er sah ein bisschen einsam aus, mit seiner schönen gelben Mähne und dem starken Blick. Es war Leo, der Löwe. „Hallo, Leo!“, rief Lilli mutig. „Wir gehen nach Nirgends, möchtest du mitkommen?“ Leo blinzelte überrascht. „Nach Nirgends? Das habe ich noch nie gehört! Aber ja, ich komme gern mit euch. Allein ist es manchmal langweilig.“ Und so marschierten nun drei Freunde weiter.",
+      "image": "Löwe.jpg",
+      "image_description": "Ein Kinderbild eines gelben Löwen mit einer braunen, zotteligen Mähne, blauen Augen und einem kleinen, fröhlichen Lächeln, der stehend dargestellt ist."
+    },
+    "absatz4": {
+      "text": "Die drei Freunde, Freddy der Fuchs, Lilli der Schmetterling und Leo der Löwe, spazierten vergnügt durch den Wald. Sie erzählten sich Geschichten und genossen die frische Luft. Da sahen sie einen großen, flauschigen Panda, der genüsslich an einem grünen Bambuszweig knabberte. Es war Poldi, der Panda! Poldi hatte ein Lächeln im Gesicht, obwohl er ganz in sein Essen vertieft war. „Poldi!“, riefen sie. „Komm mit uns nach Nirgends!“ Poldi schaute auf, lächelte breit und nickte. Gemeinsam gingen sie weiter, und sie merkten, dass Nirgends kein Ort war, sondern einfach der Weg selbst und die wunderbaren Freunde, die sie gefunden hatten. Das war das wahre Wunder der Natur!",
+      "image": "Panda.jpg",
+      "image_description": "Ein Kinderbild eines schwarz-weißen Pandas mit grünen Details um den Mund, was darauf hindeutet, dass er gerade isst, sitzend auf einer schwarzen Linie."
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_135555.json"
+}

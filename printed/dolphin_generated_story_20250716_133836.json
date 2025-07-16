@@ -1,0 +1,50 @@
+{
+  "symbol": "🐬",
+  "folder": "dolphin",
+  "title": "Der Sagenumwobene Hippogreif",
+  "direction": "custom",
+  "custom_direction": "Magisches pferd",
+  "timestamp": "2025-07-16T13:38:36.523474",
+  "selected_images": {
+    "photo_2025-07-16T12-36-15.jpg": {
+      "description": "4. nachdem er die hexe tapfer besieget, verwandelt er sich in pferd",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-35-08.jpg": {
+      "description": "1. Ein hippogreif findet ein verfluchtes schloss",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-35-35.jpg": {
+      "description": "2. der hippogreif entflucht das verwunschenes schloss",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-35-58.jpg": {
+      "description": "3. er besiegt eine böse hexe",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Der Sagenumwobene Hippogreif",
+    "absatz1": {
+      "text": "Einmal, hoch oben in den Wolken, lebte ein ganz besonderes Wesen: ein majestätischer Hippogreif namens Griffin. Er hatte goldene Federn, strahlende Augen und die Beine eines edlen Pferdes. Eines sonnigen Tages flog Griffin über ein unbekanntes Land, als er etwas Merkwürdiges sah. Tief unten, verborgen zwischen alten Bäumen, lag ein Schloss. Aber es war kein gewöhnliches Schloss – es war dunkel und umgeben von einer gruseligen, dunklen Wolke. Es sah so traurig und verlassen aus. Griffin spürte, dass etwas nicht stimmte. Er wusste, dieses Schloss war verflucht und brauchte seine Hilfe. Mit entschlossenem Flügelschlag flog er darauf zu.",
+      "image": "photo_2025-07-16T12-35-08.jpg",
+      "image_description": "1. Ein hippogreif findet ein verfluchtes schloss"
+    },
+    "absatz2": {
+      "text": "Griffin landete vorsichtig vor den hohen Mauern des Schlosses. Überall war eine unheimliche Stille. Die Bäume ringsum waren knorrig und die Luft war schwer, als ob ein unsichtbarer Schleier über allem lag. Er versuchte, mit seinen magischen Kräften den Fluch zu brechen, aber er merkte schnell, dass dieser Zauber viel zu stark war. Das Schloss schien sogar aus einem riesigen, verdrehten Baum gewachsen zu sein, und die Mauern selbst schienen zu seufzen. Griffin verstand, dass die Quelle des Fluches noch irgendwo verborgen war, vielleicht in einem geheimen Turm oder tief im Schloss selbst. Er musste den Ursprung dieses bösen Zaubers finden, um das Schloss wirklich zu befreien.",
+      "image": "photo_2025-07-16T12-35-35.jpg",
+      "image_description": "2. der hippogreif entflucht das verwunschenes schloss"
+    },
+    "absatz3": {
+      "text": "Mutig betrat Griffin das verwunschene Schloss. Er suchte in dunklen Gängen und über spindelwebverhangene Treppen, bis er sie fand: eine böse Hexe! Sie war groß, hatte lange dunkle Haare und trug einen spitzen Hut. In ihrer knochigen Hand hielt sie einen unheimlichen Knochen. Die Hexe sah Griffin mit ihren roten Augen an und schnurrte: \"Du willst mein Werk zerstören? Niemals!\" Sie schleuderte dunkle Zaubersprüche nach ihm. Aber Griffin war nicht nur mutig, sondern auch sehr geschickt. Er wich ihren Blitzen aus, wirbelte mit seinen mächtigen Flügeln und erzeugte einen gewaltigen Windstoß, der die Hexe ins Wanken brachte. Tapfer kämpfte er, bis die böse Hexe endlich besiegt war!",
+      "image": "photo_2025-07-16T12-35-58.jpg",
+      "image_description": "3. er besiegt eine böse hexe"
+    },
+    "absatz4": {
+      "text": "Als die böse Hexe besiegt war, geschah etwas Wunderbares! Ein strahlendes goldenes Licht erfüllte das Schloss und vertrieb alle Dunkelheit. Der Fluch war endlich gebrochen! Das Schloss sah nicht mehr traurig aus, sondern leuchtete hell und froh. Doch die Magie hatte auch eine Überraschung für unseren tapferen Griffin bereit. Weil er so mutig und reinherzig war, das Schloss zu retten, verwandelte er sich! Langsam verschwanden seine Flügel und sein Schnabel, und er stand da, nicht mehr als Hippogreif, sondern als ein wunderschönes, starkes Pferd mit goldenem Fell. Er wieherte vor Freude und galoppierte über die nun wieder fröhlichen Wiesen. Von diesem Tag an lebte er glücklich im befreiten Königreich.",
+      "image": "photo_2025-07-16T12-36-15.jpg",
+      "image_description": "4. nachdem er die hexe tapfer besieget, verwandelt er sich in pferd"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_133809.json"
+}

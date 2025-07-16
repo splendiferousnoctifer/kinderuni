@@ -1,0 +1,50 @@
+{
+  "symbol": "🦒",
+  "folder": "giraffe",
+  "title": "Der Drache und die Hexe",
+  "direction": "custom",
+  "custom_direction": "Es geht um drachen und hexen kämpfen gegeinander weil die hexe den drachen mehrfach beleidigt und verletzt hat, aber in wahrheit war es gar nicht die hexe, sondern er hat sich nur selbst unabsichtilch wehgetan. er kämpft gegen die hexe und gewinnt",
+  "timestamp": "2025-07-16T12:35:02.304044",
+  "selected_images": {
+    "photo_2025-07-16T12-27-46.jpg": {
+      "description": "4. drache kämpft gegen die hexe",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-26-56.jpg": {
+      "description": "3. drache schreit aua und glaubt er wird von einer hexe angegriffen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-28-09.jpg": {
+      "description": "5. der drache gewinnt und freut sich",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-26-32.jpg": {
+      "description": "2. drache schläft und liegt da",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Der Drache und die Hexe",
+    "absatz1": {
+      "text": "Tief in einem verborgenen Tal, wo die Sonne warm schien und die Berge hoch aufragten, lebte ein kleiner Drache namens Flammenherz. Er war noch jung und hatte leuchtend grüne Schuppen und Flügel, die aussahen wie frisch gewachsene Blätter. Am liebsten kuschelte sich Flammenherz in sein gemütliches Bett aus weichem Moos und träumte von fliegenden Abenteuern und leckeren Beeren. Heute lag er ganz entspannt da, die Augen fest geschlossen, und schnarchte leise vor sich hin, während die Morgensonne seine grünen Schuppen wärmte. Es war so ein wunderschöner Tag zum Schlafen und Träumen!",
+      "image": "photo_2025-07-16T12-26-32.jpg",
+      "image_description": "2. drache schläft und liegt da"
+    },
+    "absatz2": {
+      "text": "Plötzlich zuckte Flammenherz im Schlaf. Ein spitzer Ast, der vom Baum gefallen war, landete genau auf seiner Nase! „Aua!“, rief der kleine Drache laut und schreckte hoch. Er rieb sich die schmerzende Nase und blickte sich verdutzt um. Da sah er in der Ferne eine kleine Hütte und daneben eine Figur, die aussah wie eine alte Hexe mit einem spitzen Hut. „Das muss die Hexe sein!“, dachte Flammenherz wütend. „Erst beleidigt sie mich, indem sie mir Äste auf den Kopf wirft, und jetzt tut sie mir auch noch weh!“ Er knurrte leise, denn er war überzeugt, dass die Hexe ihn ärgern wollte.",
+      "image": "photo_2025-07-16T12-26-56.jpg",
+      "image_description": "3. drache schreit aua und glaubt er wird von einer hexe angegriffen"
+    },
+    "absatz3": {
+      "text": "Flammenherz stand auf, breitete seine grünen Flügel aus und stapfte entschlossen auf die kleine Hütte zu. „He, du gemeine Hexe!“, brüllte er so laut er konnte, dass die Vögel erschrocken davonflogen. Die Hexe, die eigentlich nur ihre Kräuter im Garten sammelte, schaute überrascht auf. Sie hatte gar nichts gemacht! Aber Flammenherz war schon zu wütend, um zuzuhören. Er dachte, sie würde ihn wieder angreifen, und blies eine winzige Rauchwolke aus seinen Nüstern. Die Hexe sah ziemlich verdutzt aus, als der kleine Drache zum \"Kampf\" bereitstand, obwohl sie nur eine harmlose alte Dame war. Es sah aus, als würden sie wirklich kämpfen!",
+      "image": "photo_2025-07-16T12-27-46.jpg",
+      "image_description": "4. drache kämpft gegen die hexe"
+    },
+    "absatz4": {
+      "text": "Flammenherz legte sich ins Zeug. Er fuchtelte mit den Flügeln und stampfte mit den Füßen, um die \"böse\" Hexe zu verjagen. Die alte Dame, die das alles nicht verstand, schüttelte nur den Kopf und ging schnell in ihre Hütte, um Flammenherz nicht noch wütender zu machen. Für den kleinen Drachen sah das aber ganz anders aus! Er dachte, er hätte die Hexe in die Flucht geschlagen! „Ich habe gewonnen! Sieger!“, rief Flammenherz stolz und hüpfte vor Freude auf und ab. Er war so glücklich, dass er die Hexe vertrieben hatte, obwohl er sich ja eigentlich nur selbst wehgetan hatte. Er fühlte sich wie der größte Held im ganzen Tal und war mächtig stolz auf sich!",
+      "image": "photo_2025-07-16T12-28-09.jpg",
+      "image_description": "5. der drache gewinnt und freut sich"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_123438.json"
+}

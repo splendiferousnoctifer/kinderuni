@@ -1,0 +1,27 @@
+{
+  "symbol": "🌺",
+  "folder": "flower",
+  "title": "Das wunder der natur",
+  "direction": "custom",
+  "custom_direction": "Es war ein mal ein Fuch der nicht wusste was er machen sollte. dann ging er spazieren und da traf er auf einen schmetterling und der schmetterling fragte: wohin gehst du? und der fuchs antwortete: nirgends. und der schmetterling wollte mitkommen, der fuchs wollte das auch. gemeinsam gingen sie nach nirgends. am weg fanden sie noch einen löwen und einen panda.",
+  "timestamp": "2025-07-16T13:55:55.994409",
+  "selected_images": {
+    "photo_2025-07-16T13-42-20.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-42-01.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-41-41.jpg": {
+      "description": "",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-42-58.jpg": {
+      "description": "",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}

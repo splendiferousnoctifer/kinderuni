@@ -1,0 +1,42 @@
+{
+  "symbol": "🐼",
+  "folder": "panda",
+  "title": "Der Bolzplatzheld",
+  "direction": "custom",
+  "custom_direction": "unser held schafft es das unglück abzuwenden und wird von allen am bolzplatz gefeiert",
+  "timestamp": "2025-07-16T12:25:17.418825",
+  "selected_images": {
+    "photo_2025-07-16T12-14-04.jpg": {
+      "description": "2. in der sleben nachbarschaft bricht gerade ein vulkan aus",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-13-38.jpg": {
+      "description": "1. Unser Held ist am fußballfeld und trainiert, und schießt ein paar tore und aufeinmal kommt ein riesiger bauch vom bluthimmerl herunter",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Der Bolzplatzheld",
+    "absatz1": {
+      "text": "Leo war unser Bolzplatzheld, noch bevor irgendjemand wusste, wie wichtig er mal werden würde. Jeden Nachmittag war er auf dem Fußballfeld, der Ball klebte förmlich an seinem Fuß. Er dribbelte, schoss Tore, und jubelte, als wäre er schon ein großer Star. An diesem besonderen Tag jedoch, als er gerade einen unglaublichen Fallrückzieher übte, passierte etwas Unglaubliches. Der Himmel, der eben noch blau war, färbte sich blutrot. Und dann, langsam, ganz langsam, kam ein riesiger, grauer Berg vom Himmel heruntergeschwebt, direkt auf das Fußballfeld zu! Es war ein riesiger, wackeliger Bauch aus Erde und Gestein, der genau in der Mitte des Spielfeldes landete. Leo staunte mit offenem Mund.",
+      "image": "photo_2025-07-16T12-13-38.jpg",
+      "image_description": "Unser Held ist am fußballfeld und trainiert, und schießt ein paar tore und aufeinmal kommt ein riesiger bauch vom bluthimmerl herunter"
+    },
+    "absatz2": {
+      "text": "Der riesige Bauch vibrierte leicht, als er auf dem Boden aufkam. Doch das war noch nicht alles! Plötzlich, in der Ferne, hinter den Dächern der Nachbarschaft, sah Leo etwas noch viel Unheimlicheres. Ein großer Berg, den die Kinder \"Der schlafende Riese\" nannten, erwachte mit einem gewaltigen Donnern! Rauch und rote Glut schossen aus seinem Gipfel. Der Vulkan brach aus! Und es sah so aus, als würde der riesige Bauch, der gerade gelandet war, die Lava direkt in Richtung unserer Häuser lenken können, wenn er sich nur ein kleines bisschen verschob. Panik breitete sich aus. Die Menschen rannten durcheinander, denn die Gefahr war zum Greifen nah.",
+      "image": "photo_2025-07-16T12-14-04.jpg",
+      "image_description": "in der selben nachbarschaft bricht gerade ein vulkan aus"
+    },
+    "absatz3": {
+      "text": "Leo spürte, wie sein Herz pochte. Er sah die Angst in den Augen der Erwachsenen und die Sorge auf den Gesichtern der anderen Kinder. Er musste etwas tun! Er blickte auf den riesigen Bauch, der jetzt noch stärker zitterte, und dann auf den Ball zu seinen Füßen. Plötzlich hatte er eine Idee, eine verrückte, mutige Idee! Der riesige Bauch hatte eine kleine, tiefe Delle an der Seite, die aussah wie ein perfektes Loch. Leo wusste: Wenn er den Ball genau dort hineinschoss, könnte er den riesigen Bauch stabilisieren und so die Lava umlenken, bevor sie das Dorf erreichte! Er nahm Anlauf, seine Augen waren fest auf die Delle gerichtet, bereit für den wichtigsten Schuss seines Lebens.",
+      "image": null,
+      "image_description": "A dynamic scene where the hero boy Leo is about to kick a soccer ball towards a wobbly, strange grey mound, while in the background a red-glowing volcano is erupting with smoke, showing determination on his face."
+    },
+    "absatz4": {
+      "text": "Mit all seiner Kraft, die er von unzähligen Stunden auf dem Bolzplatz hatte, traf Leo den Ball. Ein lauter Knall, und der Ball sauste wie ein gelber Blitz auf die Delle zu. Volltreffer! Der riesige Bauch gab ein tiefes, grollendes Geräusch von sich, wackelte noch einmal heftig hin und her, und dann, ganz langsam, drehte er sich ein kleines Stück. Die glühende Lava, die vom Vulkan herabfloss, wurde umgeleitet und floss harmlos in ein leeres Feld. Die Gefahr war gebannt! Ein riesiger Jubel brach los. Alle rannten zu Leo. Sie hoben ihn hoch und trugen ihn auf den Schultern. \"Du bist unser Held!\", riefen sie. Und so wurde Leo für immer als der mutige Bolzplatzheld gefeiert!",
+      "image": null,
+      "image_description": "Children are cheering and celebrating a hero boy on a soccer field, who is being lifted onto shoulders, while in the background, the volcano is now calm with only a small puff of smoke. The mood is joyful and relieved."
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_122454.json"
+}

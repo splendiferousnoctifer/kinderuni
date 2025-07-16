@@ -4,13 +4,15 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm
 from PIL import Image
 import os
+import shutil
 from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
 
 # === Settings ===
-JSON_PATH = "/Users/samzuehlke/Documents/work/kinderuni/to_print/batch_20250716_082722/star_generated_story_20250716_080332.json"
-OUTPUT_PDF = "samuel_booklet.pdf"
+TO_PRINT_DIR = "to_print"
+PDF_OUTPUT_DIR = "pdf_print"
+PRINTED_DIR = "printed"
 
 # A4 landscape will fit two A5 pages side by side
 PAGE_WIDTH, PAGE_HEIGHT = landscape(A4)
@@ -30,20 +32,6 @@ IMAGE_TEXT_SPACING = 1.2 * cm  # Increased spacing between image and text
 # Font settings
 FONT_SIZE = 12  # Increased from 10 to 12
 
-# === Load Data ===
-with open(JSON_PATH, encoding="utf-8") as f:
-    data = json.load(f)
-
-# Get folder name from JSON filename (first word before underscore)
-folder_name = os.path.basename(JSON_PATH).split('_')[0]
-IMAGE_DIR = f"accounts/{folder_name}"
-
-segments = [data["story"][k] for k in sorted(data["story"]) if k.startswith("absatz")]
-
-# === PDF Setup ===
-pdf = canvas.Canvas(OUTPUT_PDF, pagesize=landscape(A4))
-pdf.setFont("Helvetica", FONT_SIZE)
-
 def get_text_dimensions(text, font_name, font_size):
     # Helper function to calculate text block dimensions
     lines = []
@@ -60,10 +48,10 @@ def get_text_dimensions(text, font_name, font_size):
     
     return len(lines) * (font_size * 1.2), lines  # height, wrapped_lines
 
-def draw_segment(x, y, segment, available_width):
+def draw_segment(pdf, x, y, segment, available_width, image_dir):
     text = segment["text"]
     image_file = segment.get("image")
-    image_path = os.path.join(IMAGE_DIR, image_file) if image_file else None
+    image_path = os.path.join(image_dir, image_file) if image_file else None
     
     # Calculate total content height and prepare content
     content_height = 0
@@ -121,24 +109,76 @@ def draw_segment(x, y, segment, available_width):
         pdf.drawString(center_x, current_y - FONT_SIZE, line)
         current_y -= FONT_SIZE * 1.2
 
-# === Render Segments ===
-pages_needed = (len(segments) + 1) // 2  # Round up division
+def create_pdf_from_json(json_path, output_pdf):
+    # Load JSON data
+    with open(json_path, encoding="utf-8") as f:
+        data = json.load(f)
 
-for page in range(pages_needed):
-    i = page * 2
-    
-    # Left page
-    if i < len(segments):
-        draw_segment(LEFT_PAGE_X, PAGE_Y, segments[i], A5_WIDTH)
-    
-    # Right page
-    if i + 1 < len(segments):
-        draw_segment(RIGHT_PAGE_X, PAGE_Y, segments[i + 1], A5_WIDTH)
-    
-    # Only add a new page if there's more content coming
-    if page < pages_needed - 1:
-        pdf.showPage()
-        pdf.setFont("Helvetica", FONT_SIZE)
+    # Get folder name from JSON filename (first word before underscore)
+    folder_name = os.path.basename(json_path).split('_')[0]
+    image_dir = f"accounts/{folder_name}"
 
-pdf.save()
-print(f"PDF saved as: {OUTPUT_PDF}")
+    segments = [data["story"][k] for k in sorted(data["story"]) if k.startswith("absatz")]
+
+    # Create PDF
+    pdf = canvas.Canvas(output_pdf, pagesize=landscape(A4))
+    pdf.setFont("Helvetica", FONT_SIZE)
+
+    # === Render Segments ===
+    pages_needed = (len(segments) + 1) // 2  # Round up division
+
+    for page in range(pages_needed):
+        i = page * 2
+        
+        # Left page
+        if i < len(segments):
+            draw_segment(pdf, LEFT_PAGE_X, PAGE_Y, segments[i], A5_WIDTH, image_dir)
+        
+        # Right page
+        if i + 1 < len(segments):
+            draw_segment(pdf, RIGHT_PAGE_X, PAGE_Y, segments[i + 1], A5_WIDTH, image_dir)
+        
+        # Only add a new page if there's more content coming
+        if page < pages_needed - 1:
+            pdf.showPage()
+            pdf.setFont("Helvetica", FONT_SIZE)
+
+    pdf.save()
+    print(f"PDF saved as: {output_pdf}")
+
+def main():
+    # Create output directories if they don't exist
+    for directory in [PDF_OUTPUT_DIR, PRINTED_DIR]:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            print(f"Created directory: {directory}")
+
+    # Process all JSON files in the to_print directory
+    json_files = [f for f in os.listdir(TO_PRINT_DIR) if f.endswith('.json')]
+    
+    if not json_files:
+        print(f"No JSON files found in {TO_PRINT_DIR}")
+        return
+
+    print(f"Found {len(json_files)} JSON files to process")
+    
+    for json_file in json_files:
+        json_path = os.path.join(TO_PRINT_DIR, json_file)
+        # Create PDF filename by replacing .json with .pdf
+        pdf_filename = os.path.splitext(json_file)[0] + '.pdf'
+        output_pdf = os.path.join(PDF_OUTPUT_DIR, pdf_filename)
+        
+        print(f"\nProcessing: {json_file}")
+        try:
+            create_pdf_from_json(json_path, output_pdf)
+            
+            # Move the processed JSON file to the printed directory
+            printed_json_path = os.path.join(PRINTED_DIR, json_file)
+            shutil.move(json_path, printed_json_path)
+            print(f"Moved {json_file} to {PRINTED_DIR}/")
+            
+        except Exception as e:
+            print(f"Error processing {json_file}: {e}")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,38 @@
+{
+  "symbol": "🦉",
+  "folder": "owl",
+  "title": "Die sieben Geißlein",
+  "direction": "custom",
+  "custom_direction": "Der böse wolf will zu den sieben geißlein einbrechen um sie zu fressen und die 7 geißlein verteidigen sich tapfer. die ziegenmutter hat sich mit den kindern eingesperrt und den schlüssel verloren, der wolf findet den schlüssel und will damit einbrechen, die geißlein verstecken sich und können so dem wolf entlommenm. doch der wolf erwischt die geißlein und steckt sie in seinem sack und isst sie zuahuse zum mittagessen",
+  "timestamp": "2025-07-16T12:22:24.654605",
+  "selected_images": {
+    "photo_2025-07-16T12-04-28.jpg": {
+      "description": "die sieben geißlein wohnen in einem haus",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Die sieben Geißlein",
+    "absatz1": {
+      "text": "In einem gemütlichen kleinen Haus, das so aussah, als wäre es aus einem Märchenbuch entsprungen, lebten die sieben Geißlein mit ihrer lieben Ziegenmutter. Sie waren eine fröhliche Familie und liebten es, zusammen zu spielen und zu lachen. Doch die Ziegenmutter wusste, dass draußen Gefahren lauerten, besonders der böse Wolf. Eines Tages, als sie sicher im Haus waren, merkte die Mutter erschrocken, dass sie den Hausschlüssel verloren hatte! Schnell hatte sie die Tür verriegelt, aber der Schlüssel war nicht da. Die Geißlein saßen ängstlich beisammen. Sie sahen aus den Fenstern und einige schauten sogar vom Dach, bereit, ihr Zuhause zu verteidigen, wie es das Bild zeigt.",
+      "image": "photo_2025-07-16T12-04-28.jpg",
+      "image_description": "die sieben geißlein wohnen in einem haus"
+    },
+    "absatz2": {
+      "text": "Draußen aber lauerte schon der böse Wolf. Er hatte die sieben Geißlein schon lange im Visier und wollte sie unbedingt zum Mittagessen haben. Mit seinen scharfen Ohren hatte er gehört, wie die Ziegenmutter rief, dass der Schlüssel weg war. Ein hinterhältiges Grinsen breitete sich auf seinem Gesicht aus. Er schlich um das Haus herum, schnüffelte hier und da, und siehe da! Unter einem Busch, direkt neben der Haustür, blitzte etwas auf. Es war der verlorene Schlüssel der Ziegenmutter! Vorsichtig hob der Wolf ihn auf, und ein böser Gedanke formte sich in seinem Kopf: Jetzt konnte er einfach die Tür öffnen!",
+      "image": null,
+      "image_description": "Ein hinterhältiger Wolf mit einem schelmischen Grinsen, der einen großen, altmodischen Schlüssel in der Pfote hält, steht vor einem gemütlichen Haus mit geschlossener Tür. Der Wolf wirkt hinterhältig."
+    },
+    "absatz3": {
+      "text": "Der Wolf zögerte nicht lange. Er steckte den Schlüssel ins Schloss, drehte ihn um, und Klick! Die Haustür sprang auf. Ein kalter Windstoß wehte ins Haus, und die sieben Geißlein zitterten vor Angst. \"Der Wolf ist da!\", flüsterte das kleinste Geißlein. Sofort rief die Ziegenmutter: \"Versteckt euch, meine Lieben, so schnell ihr könnt!\" Die Geißlein waren sehr schlau. Eines sprang unter den Tisch, ein anderes in den Wäschesack, eines kletterte in den Kamin und wieder ein anderes versteckte sich in der Uhrenkiste. Überall suchten sie winzige Winkel und Verstecke, während der Wolf schon seinen großen Schatten durch die Tür warf.",
+      "image": null,
+      "image_description": "Eine Szene im Innenbereich. Ein großer, bedrohlicher Wolf mit langer Schnauze und scharfen Zähnen tritt durch eine offene Haustür in ein gemütliches, unordentliches Wohnzimmer. Mehrere kleine, verängstigte Geißlein verstecken sich schnell an verschiedenen Orten: eines unter einem Tisch, eines hinter einem Vorhang, eines schaut aus dem Inneren einer Uhr hervor. Der Raum ist durch ihre schnellen Bewegungen leicht unordentlich."
+    },
+    "absatz4": {
+      "text": "Der Wolf stapfte mit großen Schritten durchs Haus. Er schnüffelte unter dem Tisch und fand das erste Geißlein. Er zog das nächste aus dem Wäschesack und holte das dritte aus dem Kamin. Kein Versteck war sicher genug für die kleinen Geißlein, so schlau sie auch waren. Eines nach dem anderen, packte der Wolf alle sieben Geißlein aus ihren Verstecken. Mit einem breiten, hungrigen Grinsen steckte er sie nacheinander in seinen großen, leeren Sack. Dann schwang er den Sack über seine Schulter und trottete davon, direkt nach Hause, um seine ganz besondere Mahlzeit für das Mittagessen vorzubereiten. Es war ein trauriger Tag für die Geißlein.",
+      "image": null,
+      "image_description": "Ein großer, zufriedener Wolf geht von einem Haus weg und trägt einen prall gefüllten Sack über der Schulter. Der Sack hat kleine Unebenheiten oder Formen im Inneren, die auf die Geißlein hindeuten. Der Wolf sieht sehr zufrieden aus. Das Haus dahinter wirkt leer."
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_122203.json"
+}

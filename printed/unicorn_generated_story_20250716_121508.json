@@ -1,0 +1,50 @@
+{
+  "symbol": "🦄",
+  "folder": "unicorn",
+  "title": "Die neue freundschaft",
+  "direction": "custom",
+  "custom_direction": "Eine geschichte wie liebe und nette tiere zusammenhelfen um gemeisnam alles zu bestehen und eine neue freundschaft zu bilden",
+  "timestamp": "2025-07-16T12:15:08.328429",
+  "selected_images": {
+    "photo_2025-07-16T12-05-30.jpg": {
+      "description": "1. ein schmetterling hilft einem panda",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-06-11.jpg": {
+      "description": "4. Am abend kommt der sterrn und sagt dem schmetterling und dem panda dass sie perfekt zusammenpassen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-05-46.jpg": {
+      "description": "3. das spielzeug vom panda landet auf dem regenbogen und der panda kommt alleine nicht hin, der schmetterling fliegt nach oben und hilft ihm sein spielzeug wieder zu bekommen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-06-00.jpg": {
+      "description": "2. der panda braucht hilfe weil er in den bäumen sein spielzeug fallen hat lassen",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Die neue freundschaft",
+    "absatz1": {
+      "text": "Tief im grünen Bambuswald lebte ein kleiner, sehr gemütlicher Pandabär namens Mara. Mara liebte es, mit seinem Lieblingsspielzeug, einem kleinen roten Ball, zu spielen. Eines sonnigen Morgens spielte Mara besonders ausgelassen. Er warf seinen Ball höher und höher in die Luft. Ups! Der Ball flog zu hoch, über alle Wipfel der Bäume hinweg! Mara schaute traurig nach oben, seine Augen wurden ganz groß. Sein roter Ball war in den höchsten Ästen eines riesigen Baumes hängen geblieben. Oh weh, wie sollte er seinen geliebten Ball nur wiederbekommen? Er brauchte dringend Hilfe!",
+      "image": "photo_2025-07-16T12-06-00.jpg",
+      "image_description": "der panda braucht hilfe weil er in den bäumen sein spielzeug fallen hat lassen"
+    },
+    "absatz2": {
+      "text": "Gerade als Mara anfing, leise zu jammern, flog ein wunderschöner Schmetterling mit leuchtend violetten Punkten auf den Flügeln vorbei. Es war Mimi, der schnellste Schmetterling im ganzen Wald. Mimi sah den traurigen Pandabären und fragte mit seiner kleinen, feinen Stimme: „Was ist denn los, lieber Mara? Warum bist du so traurig?“ Mara zeigte auf den hohen Baum und erzählte von seinem verlorenen Ball. Mimi, immer hilfsbereit, überlegte nicht lange. „Kein Problem, Mara! Ich bin klein und flink, ich helfe dir!“ So flog Mimi sofort los, um den Ball zu suchen und dem Panda zu helfen.",
+      "image": "photo_2025-07-16T12-05-30.jpg",
+      "image_description": "ein schmetterling hilft einem panda"
+    },
+    "absatz3": {
+      "text": "Mimi flatterte geschickt zwischen den Blättern und Ästen hindurch, immer höher und höher. Mara schaute gespannt zu. Plötzlich sah Mimi den roten Ball! Aber oh je, er war nicht mehr im Baum. Ein kleiner Windstoß hatte ihn weitergetragen, und nun lag er auf einem wunderschönen, leuchtenden Regenbogen, der gerade am Himmel erschien! Der Regenbogen war hoch über dem Wald, und Mara konnte ihn niemals erreichen. Doch Mimi war mutig! Er flog vorsichtig zum Regenbogen, stupste den Ball sanft an und schob ihn Stück für Stück hinunter, bis er direkt vor Mara' Pfoten landete. „Juhu!“, rief Mara glücklich.",
+      "image": "photo_2025-07-16T12-05-46.jpg",
+      "image_description": "das spielzeug vom panda landet auf dem regenbogen und der panda kommt alleine nicht hin, der schmetterling fliegt nach oben und hilft ihm sein spielzeug wieder zu bekommen"
+    },
+    "absatz4": {
+      "text": "Mara schnappte sich seinen roten Ball und umarmte Mimi ganz vorsichtig, damit er seine Flügel nicht zerdrückte. „Danke, Mimi! Du bist der beste Freund!“ Mimi lächelte und ihre Herzen fühlten sich ganz warm an. Als der Abend hereinbrach und der Himmel sich lila und orange färbte, funkelte plötzlich ein heller Stern am Himmel. Er zwinkerte ihnen zu und sprach mit einer sanften, klingenden Stimme: „Ihr beiden, ein großer Pandabär und ein kleiner Schmetterling, ihr seid ein perfektes Team! Eure Freundschaft ist stark und wird euch immer helfen, jedes Abenteuer zu bestehen.“ Und so blieben Mara und Mimi fortan die allerbesten Freunde.",
+      "image": "photo_2025-07-16T12-06-11.jpg",
+      "image_description": "Am abend kommt der sterrn und sagt dem schmetterling und dem panda dass sie perfekt zusammenpassen"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_121446.json"
+}

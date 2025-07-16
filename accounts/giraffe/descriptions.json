@@ -1,0 +1,22 @@
+{
+  "photo_2025-07-16T12-26-16.jpg": {
+    "description": "1. titelbild",
+    "useImage": false
+  },
+  "photo_2025-07-16T12-27-46.jpg": {
+    "description": "4. drache kämpft gegen die hexe",
+    "useImage": true
+  },
+  "photo_2025-07-16T12-26-56.jpg": {
+    "description": "3. drache schreit aua und glaubt er wird von einer hexe angegriffen",
+    "useImage": true
+  },
+  "photo_2025-07-16T12-28-09.jpg": {
+    "description": "5. der drache gewinnt und freut sich",
+    "useImage": true
+  },
+  "photo_2025-07-16T12-26-32.jpg": {
+    "description": "2. drache schläft und liegt da",
+    "useImage": true
+  }
+}

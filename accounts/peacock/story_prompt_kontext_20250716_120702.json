@@ -1,0 +1,27 @@
+{
+  "symbol": "🦚",
+  "folder": "peacock",
+  "title": "Der Große Strichmännchenkrieg",
+  "direction": "custom",
+  "custom_direction": "Zwei Strichmännchen kämpfen gegeinander in einem großen Strichmännchen krieg",
+  "timestamp": "2025-07-16T12:07:02.623367",
+  "selected_images": {
+    "photo_2025-07-16T12-01-26.jpg": {
+      "description": "4. die dunklen strichmännchen gewinnen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-01-11.jpg": {
+      "description": "3. die strichmännchen ergeben sich",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-00-09.jpg": {
+      "description": "1. zwei strichmännchen scheißen aufeinander",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-00-36.jpg": {
+      "description": "2. ein strichmännchen feuert auf eine kleinere gruppe",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}

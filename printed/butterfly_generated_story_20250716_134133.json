@@ -1,0 +1,50 @@
+{
+  "symbol": "🦋",
+  "folder": "butterfly",
+  "title": "Das Mädchen und der Regenbogen",
+  "direction": "custom",
+  "custom_direction": "Wundervoller regenbogen hilft mädchen von dem gemeisnamen abenteuer wieder zurück nach hause zu kommen",
+  "timestamp": "2025-07-16T13:41:33.054806",
+  "selected_images": {
+    "photo_2025-07-16T12-37-45.jpg": {
+      "description": "3. beim hügel ist ein regenbogen mit einer wolketreppe",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-56.jpg": {
+      "description": "4. luna rutscht auf dem regenbogen wieder rrunter zu ihrem haus",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-26.jpg": {
+      "description": "2. Luna geh auf einenhügel",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-06.jpg": {
+      "description": "1. Haus der Familie Wumms",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Das Mädchen und der Regenbogen",
+    "absatz1": {
+      "text": "In einem gemütlichen kleinen Haus, das so aussah, als hätte es einen lustigen roten Hut auf, wohnte ein Mädchen namens Luna. Es war das Haus der Familie Wumms, und es stand mitten in einer grünen Wiese, wo die Sonne jeden Morgen fröhlich hereinschien. Luna liebte ihr Zuhause, doch manchmal, wenn sie aus dem Fenster schaute und die sanften Hügel in der Ferne sah, träumte sie von Abenteuern. Heute war so ein Tag. Die Sonne schien hell und lockte sie nach draußen, weit weg von den Spielsachen in ihrem Zimmer. Sie fragte sich, welche Geheimnisse die Welt wohl für sie bereithielt.",
+      "image": "photo_2025-07-16T12-37-06.jpg",
+      "image_description": "1. Haus der Familie Wumms"
+    },
+    "absatz2": {
+      "text": "Nachdem sie Mamas Erlaubnis eingeholt hatte, band Luna ihre kleinen roten Schuhe und machte sich auf den Weg. Sie lief und lief, die frische Luft strich durch ihre Haare, und die Grashalme kitzelten ihre Knöchel. Ihr Ziel war der höchste Hügel, den sie von ihrem Fenster aus sehen konnte. Es war ein bisschen anstrengend, den Hang hinaufzusteigen, aber Luna war ein mutiges Mädchen. Oben angekommen, atmete sie tief ein und schaute sich um. Von hier aus sah ihr Haus ganz klein aus, und die Welt schien riesig und voller Wunder. Sie fühlte sich wie eine kleine Entdeckerin, die kurz davor war, etwas ganz Besonderes zu finden.",
+      "image": "photo_2025-07-16T12-37-26.jpg",
+      "image_description": "2. Luna geh auf einenhügel"
+    },
+    "absatz3": {
+      "text": "Und tatsächlich! Kaum hatte Luna den Hügel erklommen, da geschah etwas Zauberhaftes. Plötzlich, wie aus dem Nichts, erschien ein leuchtender Regenbogen! Er spannte sich majestätisch über den Himmel und seine Farben waren so strahlend, dass Luna die Augen weit aufriss. Doch das war noch nicht alles: Am Fuße des Regenbogens, genau dort, wo er den Hügel berührte, sah Luna eine weiche Wolke, aus der kleine Wolkenstufen nach oben führten – wie eine echte Treppe in den Himmel! Das war ja noch spannender als alles, was sie sich je hätte vorstellen können. Sollte sie wirklich die Treppe hinaufsteigen? Ihr Herz klopfte vor Aufregung.",
+      "image": "photo_2025-07-16T12-37-45.jpg",
+      "image_description": "3. beim hügel ist ein regenbogen mit einer wolketreppe"
+    },
+    "absatz4": {
+      "text": "Mutig setzte Luna einen Fuß auf die erste Wolkenstufe, dann den nächsten. Ganz vorsichtig stieg sie hinauf, höher und höher, bis sie die Spitze des Regenbogens erreichte. Von dort oben konnte sie ihr Haus noch viel besser sehen! Der Regenbogen fühlte sich weich und glatt an, wie eine riesige, bunte Rutschbahn. Und so ließ sich Luna nicht zweimal bitten! Sie rutschte lachend den Regenbogen hinunter, schneller und schneller, die Farben wirbelten um sie herum. Es war das schönste Rutschvergnügen, das sie je erlebt hatte! Im Nu landete sie sanft direkt vor der Haustür der Familie Wumms. Was für ein unglaubliches Abenteuer! Mit einem breiten Grinsen und vielen bunten Erinnerungen ging Luna wieder in ihr gemütliches Zuhause.",
+      "image": "photo_2025-07-16T12-37-56.jpg",
+      "image_description": "4. luna rutscht auf dem regenbogen wieder rrunter zu ihrem haus"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_134110.json"
+}

@@ -1,0 +1,50 @@
+{
+  "symbol": "🌟",
+  "folder": "star",
+  "title": "Parunzel",
+  "direction": "fairies",
+  "custom_direction": "",
+  "timestamp": "2025-07-16T11:58:59.327973",
+  "selected_images": {
+    "EAf0uhVUIAAVBjp.jpg": {
+      "description": "2. parunzel sitzt mit ihrem chamäleon auf einem sessel und trink einen zaubertrank, damit sie nachher länger und besser zeichen kann",
+      "useImage": true
+    },
+    "tumblr_lsot6oqx6X1qetpbso1_1280.jpg": {
+      "description": "3. parunzel zeichnet und wird von der leinwand verschlungen",
+      "useImage": true
+    },
+    "tumblr_m1d8p5gxVg1r76dh3o1_1280.jpg": {
+      "description": "4. parunzel erlebt ein riesen abenteur",
+      "useImage": true
+    },
+    "EAf0uhSVUAQ1z_R.jpg": {
+      "description": "1. parunzel braut einen zaubertrank mit ihrem chamäleon",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Parunzel",
+    "absatz1": {
+      "text": "Parunzel war kein gewöhnliches Mädchen. Sie lebte in einem gemütlichen Turmzimmer, umgeben von Büchern, Farben und einer Menge geheimnisvoller Fläschchen. Ihr bester Freund war ein freches, kunterbuntes Chamäleon namens Flick, das seine Farbe blitzschnell wechseln konnte, je nachdem, was Parunzel gerade dachte oder wie sie sich fühlte. Heute war ein ganz besonderer Tag, denn Parunzel und Flick waren dabei, einen magischen Zaubertrank zu brauen. In einem großen Kessel rührten sie vorsichtig mit einem Holzlöffel, während bunte Bläschen aufstiegen und süßer Duft den Raum erfüllte. Flick hielt eine glitzernde Feder, bereit, sie im richtigen Moment in den Trank zu tauchen, um ihm die letzte magische Note zu verleihen.",
+      "image": "EAf0uhSVUAQ1z_R.jpg",
+      "image_description": "parunzel braut einen zaubertrank mit ihrem chamäleon"
+    },
+    "absatz2": {
+      "text": "Nachdem der Zaubertrank fertig war und wunderschön glitzerte, kuschelten sich Parunzel und Flick in einen großen, weichen Sessel. Parunzel hielt einen Becher mit dem dampfenden, leuchtenden Gebräu in der Hand. Sie wollte heute Abend ein ganz besonders großes und schönes Bild malen und brauchte dafür etwas extra magische Hilfe. Dieser Trank sollte ihr helfen, länger wach zu bleiben und noch viel besser zu zeichnen, als sie es sowieso schon konnte. Mit einem kleinen Schluck nahm sie den ersten Tropfen der magischen Flüssigkeit. Flick saß auf ihrer Schulter, schaute sie mit seinen großen Kulleraugen an und wartete gespannt, was als Nächstes passieren würde. Parunzel spürte schon ein leichtes Kribbeln in ihren Fingern – ein gutes Zeichen!",
+      "image": "EAf0uhVUIAAVBjp.jpg",
+      "image_description": "parunzel sitzt mit ihrem chamäleon auf einem sessel und trink einen zaubertrank, damit sie nachher länger und besser zeichen kann"
+    },
+    "absatz3": {
+      "text": "Mit neuer Energie und magischer Inspiration schnappte sich Parunzel sofort ihre Pinsel und begann zu malen. Flick saß auf der Staffelei und hielt ihr abwechselnd die bunte Farbpalette oder die feinsten Pinsel hin. Parunzel tauchte ihren Pinsel in leuchtendes Blau und begann, einen Himmel auf ihre große Leinwand zu zaubern. Doch dies war kein gewöhnlicher Himmel! Die Farben tanzten und leuchteten so stark, dass die Leinwand plötzlich zu flimmern begann. Ein sanfter Sog zog an Parunzels Pinsel, und ehe sie sich versah, wurde sie, mitsamt ihrer Staffelei und dem überraschten Flick, direkt in das gemalte Bild hineingezogen! Die Leinwand schluckte sie ganz, und nur noch ein paar Farbspritzer blieben im leeren Raum zurück.",
+      "image": "tumblr_lsot6oq6X1qetpbso1_1280.jpg",
+      "image_description": "parunzel zeichnet und wird von der leinwand verschlungen"
+    },
+    "absatz4": {
+      "text": "Parunzel und Flick landeten sanft auf einer weichen Wiese aus Regenbogenfarben. Wow, was für ein Abenteuer! Sie waren in die Welt ihrer eigenen Zeichnung gesprungen! Parunzel schaute sich staunend um, ihre Augen leuchteten vor Freude und Neugier. Mal war sie ganz aufgeregt, ihre Augen weit geöffnet und ein Lächeln auf dem Gesicht, als sie einen fliegenden Fisch sah. Dann wieder zupfte sie besorgt an ihrem Zopf, ihre Stirn gerunzelt und die Lippen geschürzt, als sie plötzlich vor einem kniffligen Rätsel stand. Ein anderes Mal war sie ganz erschrocken und ihre Augen wurden groß und ängstlich, als ein riesiger, freundlicher Drache auftauchte. Zusammen mit Flick erlebte Parunzel die tollsten und verrücktesten Dinge, und sie wusste, dieses Abenteuer würde sie nie vergessen!",
+      "image": "tumblr_m1d8p5gxVg1r76dh3o1_1280.jpg",
+      "image_description": "parunzel erlebt ein riesen abenteur"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_115831.json"
+}

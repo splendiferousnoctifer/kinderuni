@@ -25,7 +25,7 @@ def configure_gemini():
     """Configure the Gemini API with your API key"""
     # You'll need to set your API key as an environment variable
     # export GOOGLE_API_KEY="your-api-key-here"
-    api_key = "AIzaSyBHkEw47Dk-bZwKui1Rm4Zn833M-vmySsE"
+    api_key = "AIzaSyCcVZNht-lv5BsSrVK_jK7hbjkQ6XZNfGk"
     if not api_key:
         print("Warning: GOOGLE_API_KEY environment variable not set")
         return None
@@ -347,13 +347,32 @@ class CustomHandler(SimpleHTTPRequestHandler):
         # Handle static file serving
         file_path = self.find_file_in_stations(self.path)
         if file_path:
-            self.log_debug(f"Serving file: {file_path}")
-            self.path = file_path
-            return SimpleHTTPRequestHandler.do_GET(self)
+            try:
+                self.log_debug(f"Serving file: {file_path}")
+                with open(file_path, 'rb') as f:
+                    self.send_response(200)
+                    if file_path.endswith('.html'):
+                        self.send_header('Content-type', 'text/html')
+                    elif file_path.endswith('.css'):
+                        self.send_header('Content-type', 'text/css')
+                    elif file_path.endswith('.js'):
+                        self.send_header('Content-type', 'application/javascript')
+                    elif file_path.endswith(('.jpg', '.jpeg')):
+                        self.send_header('Content-type', 'image/jpeg')
+                    elif file_path.endswith('.png'):
+                        self.send_header('Content-type', 'image/png')
+                    else:
+                        self.send_header('Content-type', 'application/octet-stream')
+                    fs = os.fstat(f.fileno())
+                    self.send_header("Content-Length", str(fs[6]))
+                    self.end_headers()
+                    self.wfile.write(f.read())
+            except Exception as e:
+                self.log_debug(f"Error serving file {file_path}: {str(e)}")
+                self.send_error(404, "File not found")
         else:
             self.log_debug(f"No file found for path: {self.path}")
             self.send_error(404, "File not found")
-            return
 
     def do_POST(self):
         if self.path == '/save-image':

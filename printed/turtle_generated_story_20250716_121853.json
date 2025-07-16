@@ -1,0 +1,50 @@
+{
+  "symbol": "🐢",
+  "folder": "turtle",
+  "title": "Die superschlaue katze",
+  "direction": "custom",
+  "custom_direction": "Geschichte einer schlauen katze die das mäiuse fangen lernte vergessen hat",
+  "timestamp": "2025-07-16T12:18:53.166931",
+  "selected_images": {
+    "photo_2025-07-16T12-07-33.jpg": {
+      "description": "2. ihr gehirn ist so riesig, sie wollte unbedingt mäuse fangen aber hat es vergessen wie sie mäsue fängt, weil so viele andere tole gedanken im kopf sind",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-08-22.jpg": {
+      "description": "3. im internet schaute sie sich videos an wie man mäuse fängt, um auch hier noch schlauer zu werden",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-07-15.jpg": {
+      "description": "1. eine katze ist so schlau",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-08-44.jpg": {
+      "description": "4. sie schaute in ihren tresor und dann ging sie jagen",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Die superschlaue katze",
+    "absatz1": {
+      "text": "Es war einmal eine Katze namens Mimi, und sie war wirklich die schlauste Katze, die man sich vorstellen konnte! Ihr Kopf steckte voller Ideen, und sie wusste einfach alles. Mimi konnte knifflige Rätsel lösen, die selbst Menschen zum Nachdenken brachten, und sie verstand die Welt viel besser als jede andere Katze. Wenn man sie ansah, mit ihren wachen Augen und dem klugen Blick, merkte man sofort: Diese Katze ist etwas Besonderes! Sie war bekannt dafür, die klügste Katze im ganzen Land zu sein und hatte immer einen schlauen Plan parat, egal was passierte.",
+      "image": "photo_2025-07-16T12-07-15.jpg",
+      "image_description": "1. eine katze ist so schlau"
+    },
+    "absatz2": {
+      "text": "Doch selbst die superschlaue Mimi hatte manchmal ein kleines Problem. Ihr Gehirn war so riesig, dass es voller cooler Gedanken und toller Ideen war. Sie dachte über das Universum nach, über neue Erfindungen und wie man die perfekte Kuscheldecke strickt. All diese schlauen Dinge füllten ihren Kopf so sehr, dass sie etwas ganz Wichtiges vergessen hatte: Wie man Mäuse fängt! Mäuse waren doch eigentlich für jede Katze das A und O, aber Mimi war so mit ihren wissenschaftlichen Überlegungen beschäftigt, dass diese kleine, aber wichtige Fähigkeit einfach aus ihrem Gedächtnis verschwunden war. Das war ärgerlich, denn ein Mäuschen zum Abendessen wäre schon toll gewesen!",
+      "image": "photo_2025-07-16T12-07-33.jpg",
+      "image_description": "2. ihr gehirn ist so riesig, sie wollte unbedingt mäuse fangen aber hat es vergessen wie sie mäsue fängt, weil so viele andere tole gedanken im kopf sind"
+    },
+    "absatz3": {
+      "text": "Mimi überlegte nicht lange. Eine schlaue Katze wie sie wusste genau, was zu tun war! Sie setzte sich an ihren kleinen Computer, den sie sich selbst gebaut hatte, und loggte sich ins Internet ein. Dort suchte sie nicht nach lustigen Katzenvideos oder Spielzeugmäusen. Nein! Mimi schaute sich ganz genau Lernvideos an, in denen andere Katzen zeigten, wie man Mäuse fängt. Sie studierte jede Bewegung, jedes Anschleichen, jeden Sprung und jede Landung. Sie wollte nicht nur wieder wissen, wie es geht, sondern sie wollte die beste Mäusejägerin der Welt werden – noch schlauer als alle anderen Katzen zusammen!",
+      "image": "photo_2025-07-16T12-08-22.jpg",
+      "image_description": "3. im internet schaute sie sich videos an wie man mäuse fängt, um auch hier noch schlauer zu werden"
+    },
+    "absatz4": {
+      "text": "Nachdem Mimi alle Videos studiert und sich alles ganz genau gemerkt hatte, ging sie zu ihrem geheimen Tresor. Was wohl darin war? Vielleicht ein spezieller Jagdhut oder eine superleise Pfotenschuh? Nein! Darin waren ihre allerwichtigsten Jagdutensilien: Eine Lupe, um die kleinsten Spuren zu finden, und ein kleines Notizbuch, in dem sie sich alle Mäusefang-Strategien notiert hatte. Mit ihrem neu gewonnenen Wissen und ihren vorbereiteten Utensilien war Mimi nun bereit. Sie schlich leise aus dem Haus, bereit für ihr großes Abenteuer. Die superschlaue Katze würde heute ganz bestimmt die schlauste Maus im Dorf fangen!",
+      "image": "photo_2025-07-16T12-08-44.jpg",
+      "image_description": "4. sie schaute in ihren tresor und dann ging sie jagen"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_121831.json"
+}

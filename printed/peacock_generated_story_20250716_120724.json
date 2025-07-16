@@ -1,0 +1,50 @@
+{
+  "symbol": "🦚",
+  "folder": "peacock",
+  "title": "Der Große Strichmännchenkrieg",
+  "direction": "custom",
+  "custom_direction": "Zwei Strichmännchen kämpfen gegeinander in einem großen Strichmännchen krieg",
+  "timestamp": "2025-07-16T12:07:24.118597",
+  "selected_images": {
+    "photo_2025-07-16T12-01-26.jpg": {
+      "description": "4. die dunklen strichmännchen gewinnen",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-01-11.jpg": {
+      "description": "3. die strichmännchen ergeben sich",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-00-09.jpg": {
+      "description": "1. zwei strichmännchen scheißen aufeinander",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-00-36.jpg": {
+      "description": "2. ein strichmännchen feuert auf eine kleinere gruppe",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Der Große Strichmännchenkrieg",
+    "absatz1": {
+      "text": "Es war einmal in einer Welt, die nur aus Linien und Strichen bestand, da lebten die fröhlichen Strichmännchen. Eines Tages aber, begannen zwei Gruppen zu streiten, und daraus entstand der Große Strichmännchenkrieg! Auf einer staubigen Ebene standen sich zwei mutige Strichmännchen gegenüber. Das eine, tapfer aufrecht, feuerte kleine Lichtstrahlen aus seinem Lichtstrahl-Werfer ab. Das andere Strichmännchen duckte sich geschickt hinter einer kleinen Anhöhe, während es ebenfalls mit eigenen Lichtblitzen antwortete. Es war der Beginn eines spannenden Kampfes, bei dem jede Linie zählte und jeder Strich wichtig war, um sich zu verteidigen.",
+      "image": "photo_2025-07-16T12-00-09.jpg",
+      "image_description": "1. zwei strichmännchen scheißen aufeinander"
+    },
+    "absatz2": {
+      "text": "Der Kampf wurde immer größer und lauter. Plötzlich stürmte ein großes, dunkleres Strichmännchen, das eine riesige Kanone trug, auf ein paar kleinere Strichmännchen zu. Die kleineren Strichmännchen waren überrascht und rannten in Richtung eines hohen Gebäudes, um Schutz zu suchen. Das dunkle Strichmännchen zielte mit seiner Kanone und feuerte unaufhörlich winzige Farbkugeln ab, die auf dem Boden aufschlugen und bunte Spuren hinterließen. Es sah so aus, als würden die dunklen Strichmännchen immer stärker werden und die anderen Strichmännchen vor sich hertreiben.",
+      "image": "photo_2025-07-16T12-00-36.jpg",
+      "image_description": "2. ein strichmännchen feuert auf eine kleinere gruppe"
+    },
+    "absatz3": {
+      "text": "Die kleinen Strichmännchen hatten sich hinter einem großen, stabilen Bauwerk versteckt, aber die dunklen Strichmännchen umzingelten sie langsam. Sie sahen sich an und wussten, dass sie nicht mehr lange durchhalten konnten. Mit einem Seufzer entschieden sie sich. Eines der Strichmännchen hob seine Hände in die Luft, ein Zeichen, dass sie aufgeben würden. Langsam und vorsichtig legten die anderen Strichmännchen ihre kleinen Strich-Waffen nieder. Es war ein trauriger Moment, aber manchmal ist es klüger, aufzugeben, als einen hoffnungslosen Kampf fortzusetzen.",
+      "image": "photo_2025-07-16T12-01-11.jpg",
+      "image_description": "3. die strichmännchen ergeben sich"
+    },
+    "absatz4": {
+      "text": "Und so kam es, dass die dunklen Strichmännchen den großen Strichmännchenkrieg gewannen! Ihr Anführer, ein besonders dunkel gezeichnetes Strichmännchen, stand hoch und stolz, mit seiner riesigen Waffe über der Schulter. Hinter ihm lagen die besiegten Strichmännchen, die sich nun geschlagen gaben. Überall hörte man die triumphierenden Rufe der dunklen Strichmännchen, die ihren Sieg feierten. Der Krieg war vorbei, und eine neue Zeit begann in der Welt der Strichmännchen. Ob sie nun alle Freunde werden würden? Das würde die Zukunft zeigen!",
+      "image": "photo_2025-07-16T12-01-26.jpg",
+      "image_description": "4. die dunklen strichmännchen gewinnen"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_120702.json"
+}

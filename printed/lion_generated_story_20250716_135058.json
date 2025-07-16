@@ -1,0 +1,50 @@
+{
+  "symbol": "🦁",
+  "folder": "lion",
+  "title": "Peter Hase",
+  "direction": "custom",
+  "custom_direction": "Fabelhafte Tiere",
+  "timestamp": "2025-07-16T13:50:58.281124",
+  "selected_images": {
+    "photo_2025-07-16T13-40-39.jpg": {
+      "description": "4. und sie essen gemeinsam einen leckeren kuchen",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-39-59.jpg": {
+      "description": "3. er trifft auf einen freund Igi",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-39-29.jpg": {
+      "description": "2. Peter hase geht spazieren",
+      "useImage": true
+    },
+    "photo_2025-07-16T13-38-53.jpg": {
+      "description": "1. Peter hase steht vor seinem haus",
+      "useImage": true
+    }
+  },
+  "story": {
+    "titel": "Peter Hase",
+    "absatz1": {
+      "text": "Guten Morgen, kleiner Freund! Darf ich dir Peter Hase vorstellen? Er wohnt in einem gemütlichen Häuschen mit einem roten Dach, ganz am Rande des großen Waldes. Eines sonnigen Morgens, als die Vögel schon fröhlich zwitscherten und der Tau auf den Grashalmen glitzerte, stand Peter vor seinem Haus. Er reckte und streckte sich und atmete tief die frische Morgenluft ein. Seine langen Hasenohren zuckten aufmerksam. Er überlegte, was dieser neue Tag wohl für Abenteuer bereithalten würde. Vielleicht ein neues Blümchen entdecken? Oder einen Freund besuchen? Peter war bereit für alles, was kam!",
+      "image": "photo_2025-07-16T13-38-53.jpg",
+      "image_description": "1. Peter Hase steht vor seinem Haus"
+    },
+    "absatz2": {
+      "text": "Nach einem kleinen Frühstück, das aus knackigen Karotten und saftigem Klee bestand, beschloss Peter, einen Spaziergang zu machen. Fröhlich hoppelte er los, immer der kleinen Wiesenpfad entlang. Überall gab es etwas Spannendes zu sehen! Eine fleißige Biene summte von Blume zu Blume, bunte Schmetterlinge tanzten in der Luft und oben am Himmel zogen kleine Schäfchenwolken vorbei. Peter hüpfte über kleine Steine, sprang über Wurzeln und genoss die kühle Brise, die durch sein Fell strich. Er war so glücklich, die Natur um sich herum zu erleben und die Welt zu erkunden.",
+      "image": "photo_2025-07-16T13-39-29.jpg",
+      "image_description": "2. Peter Hase geht spazieren"
+    },
+    "absatz3": {
+      "text": "Plötzlich, als Peter gerade unter einem großen Baum hindurchlief, raschelte es im Gebüsch. Er blieb stehen und spitzte die Ohren. Und dann, tataaa! Da kam Igi, der kleine Igel, unter den Blättern hervor gekrabbelt! Igi hatte seine stacheligen Rückenhaare ganz flach gelegt, damit er besser durch das Gestrüpp kam. Peter rief fröhlich: „Hallo, Igi! Was machst du denn hier?“ Igi antwortete mit einem Lächeln: „Ich suche leckere Beeren zum Naschen! Und du, Peter?“ Die beiden Freunde freuten sich sehr, sich getroffen zu haben. Sie beschlossen, den Rest des Spaziergangs gemeinsam zu gehen.",
+      "image": "photo_2025-07-16T13-39-59.jpg",
+      "image_description": "3. Er trifft auf einen Freund Igi"
+    },
+    "absatz4": {
+      "text": "Nachdem sie noch viele spannende Dinge auf ihrem Spaziergang entdeckt hatten – einen lustigen Käfer, der rückwärts lief, und einen Bach, der leise vor sich hinplätscherte – bekamen Peter und Igi großen Hunger. „Ich hab eine Idee!“, sagte Peter. „Komm doch mit zu mir nach Hause. Meine Mama hat heute Morgen einen superleckeren Kuchen gebacken!“ Igi konnte es kaum erwarten! Und so hoppelte Peter und watschelte Igi schnell zu Peters gemütlichem Haus. Dort saßen sie dann gemeinsam am Tisch, lachten und aßen ein großes Stück vom köstlichen Kuchen. Es war der perfekte Abschluss für einen wundervollen Tag voller Abenteuer und Freundschaft.",
+      "image": "photo_2025-07-16T13-40-39.jpg",
+      "image_description": "4. und sie essen gemeinsam einen leckeren Kuchen"
+    }
+  },
+  "original_prompt_file": "story_prompt_kontext_20250716_135036.json"
+}

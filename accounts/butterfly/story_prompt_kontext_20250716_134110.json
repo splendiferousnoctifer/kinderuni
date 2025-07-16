@@ -1,0 +1,27 @@
+{
+  "symbol": "🦋",
+  "folder": "butterfly",
+  "title": "Das Mädchen und der Regenbogen",
+  "direction": "custom",
+  "custom_direction": "Wundervoller regenbogen hilft mädchen von dem gemeisnamen abenteuer wieder zurück nach hause zu kommen",
+  "timestamp": "2025-07-16T13:41:10.624961",
+  "selected_images": {
+    "photo_2025-07-16T12-37-45.jpg": {
+      "description": "3. beim hügel ist ein regenbogen mit einer wolketreppe",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-56.jpg": {
+      "description": "4. luna rutscht auf dem regenbogen wieder rrunter zu ihrem haus",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-26.jpg": {
+      "description": "2. Luna geh auf einenhügel",
+      "useImage": true
+    },
+    "photo_2025-07-16T12-37-06.jpg": {
+      "description": "1. Haus der Familie Wumms",
+      "useImage": true
+    }
+  },
+  "total_selected_images": 4
+}
